@@ -464,10 +464,10 @@ static char *yy_last_accepting_cpos;
 #define YY_MORE_ADJ 0
 #define YY_RESTORE_YY_MORE_OFFSET
 char *yytext;
-#line 1 "lexical-analysis.l"
+#line 1 ".\\lexical-analysis.l"
 #define INITIAL 0
 /*Definition Section*/
-#line 3 "lexical-analysis.l"
+#line 3 ".\\lexical-analysis.l"
 	#include<stdio.h>
 /*Rule Section*/
 #line 474 "lex.yy.c"
@@ -621,7 +621,7 @@ YY_DECL
 	register char *yy_cp, *yy_bp;
 	register int yy_act;
 
-#line 6 "lexical-analysis.l"
+#line 6 ".\\lexical-analysis.l"
 
 #line 627 "lex.yy.c"
 
@@ -708,37 +708,37 @@ do_action:	/* This label is used only to access EOF actions. */
 
 case 1:
 YY_RULE_SETUP
-#line 7 "lexical-analysis.l"
+#line 7 ".\\lexical-analysis.l"
 {printf("%s\tKEYWORD\n",yytext);} 						
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
-#line 8 "lexical-analysis.l"
+#line 8 ".\\lexical-analysis.l"
 {printf("%s\tSEPERATOR\n",yytext);}	
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
-#line 9 "lexical-analysis.l"
+#line 9 ".\\lexical-analysis.l"
 {printf("%s\t Number \n",yytext);}					
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
-#line 11 "lexical-analysis.l"
+#line 11 ".\\lexical-analysis.l"
 {printf("%s\tOPERATOR\n",yytext);}						
 	YY_BREAK
 case 5:
 YY_RULE_SETUP
-#line 12 "lexical-analysis.l"
+#line 12 ".\\lexical-analysis.l"
 {printf("%s\tIdentifier\n",yytext);}    
 	YY_BREAK
 case 6:
 YY_RULE_SETUP
-#line 14 "lexical-analysis.l"
+#line 14 ".\\lexical-analysis.l"
 ; 												
 	YY_BREAK
 case 7:
 YY_RULE_SETUP
-#line 15 "lexical-analysis.l"
+#line 15 ".\\lexical-analysis.l"
 ECHO;
 	YY_BREAK
 #line 745 "lex.yy.c"
@@ -1627,7 +1627,7 @@ int main()
 	return 0;
 	}
 #endif
-#line 15 "lexical-analysis.l"
+#line 15 ".\\lexical-analysis.l"
 
 
 /*call the yywrap function*/
