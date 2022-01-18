@@ -8,8 +8,8 @@
 %%
 
 
-
-
+"integer"|"real"|"complex"|"logical"|"character" return dt;
+"program"|"implicit"|"none"|"print"|"end"|"kind"|"type" return kw;
 "if" return iff;
 
 
@@ -25,7 +25,7 @@
 
 
 
-[ \t]+ ;
+[ \t]+|[!].* ;
 .      return inval ;
 												
 %%
@@ -54,7 +54,7 @@ int main(void)
         sprintf(buffer, "%d", token);
         // fprintf (yyout,"%d",token);
         fprintf(yyout,"%s",yytext);
-        fputs("\t",yyout);
+        fputs("\tThe token is \t",yyout);
         fputs(buffer,yyout);
         fputs("\ton line No - ",yyout);
         sprintf(buffer, "%d", yylineno);
