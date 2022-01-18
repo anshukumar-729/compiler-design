@@ -1,0 +1,25 @@
+// #define kw 2
+// #define spt "SEPARATOR"
+// #define idf "IDENTIFIER"
+// #define dt "DATATYPE"
+// #define ddt "DERIVEDDATATYPE"
+// #define stmt "STATEMENT"
+// #define opt "OPERATOR"
+// #define ifel "IFELSE"
+// #define iff "IFF"
+// #define switch "SWITCH"
+// #define while "WHILE"
+// #define for "FOR"
+// #define dowhile "DOWHILE"
+// #define fun "FUNCTION"
+// #define cmmts "COMMENT"
+// #define nu "NUMBERS"
+// #define ws "WHITESPACE"
+// #define invalid "INVALID"
+
+
+
+// [0-9]* return nuu;
+// "{"|"}"|";"|","|"("|")"  return spt;	
+// "+"|"-"|"/"|"="|"*"|"%"  return opt;						
+// "if" return iff;

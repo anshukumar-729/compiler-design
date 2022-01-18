@@ -4,7 +4,8 @@
 %}
 /*Rule Section*/
 %%
-"auto"|"double"|"int"|"struct"|"break"|"else"|"long"|"switch"|"case"|"enum"|"register"|"typedef"|"char"|"extern"|"return"|"union"|"continue"|"for"|"signed"|"void"|"do"|"if"|"static"|"while"|"default"|"goto"|"sizeof"|"volatile"|"const"|"float"|"short" {printf("%s\tKEYWORD\n",yytext);} 						
+  "auto"|"double"|"int"|"struct"|"break"|"else"|"long"|"switch"|"case"|"enum"|"register"|"typedef"|"char"|"extern"|"return"|"union"|"continue"|"for"|"signed"|"void"|"do"|"if"|"static"|"while"|"default"|"goto"|"sizeof"|"volatile"|"const"|"float"|"short" {printf("%s\tKEYWORD\n",yytext);} 
+
 "{"|"}"|";"|","|"("|")"   {printf("%s\tSEPERATOR\n",yytext);}	
 [0-9]+ {printf("%s\t Number \n",yytext);}					
 
