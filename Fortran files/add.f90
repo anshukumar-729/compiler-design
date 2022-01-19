@@ -4,12 +4,14 @@ program addNumbers
    implicit none
 
 ! Type declarations
-   real :: a, b, result
+   integer :: a, b, result
 
 ! Executable statements
    a = 9
-   b = 15.0
-   result = a + b
+   b = 1
+   if (a<b)then
    print *, 'The total is ', result
-
+   else
+      print *, 0
+   end if
 end program addNumbers

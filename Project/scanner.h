@@ -1,19 +1,15 @@
-#define kw 1 //KEYWORD
-#define spt 2 //SEPARATOR
-#define idf 3 //IDENTIFIER
-#define dt 4 //DATATYPE
-#define ddt 5 //DERIVEDDATATYPE
-#define stmt 6 //STATEMENT
-#define opt 7 //OPERATOR
-#define ifel 8 //IFELSE
-#define iff 9 //IFF
-#define swit 10 //SWITCH
-#define whi 11 //WHILE
-#define fo 12 //FOR
-#define dowhi 13 //DOWHILE
-#define fun 14 //FUNCTION
-#define cmmts 15 //COMMENT
-#define nu 16 //NUMBERS
-#define ws 17 //WHITESPACE
-#define inval 18 //INVALID
-#define nl 19 //INVALID
+#define kw_PROGRAM  1 
+#define kw_IMPLICIT 2 
+#define kw_NONE 3 
+#define dt_REAL 4 
+#define IDENTIFIER 5 
+#define sp_COLON 6 
+#define sp_SEMICOLON 7 
+#define op_EQUAL 8 
+#define op_ADD 9 
+#define op_SUB 10 
+#define op_MUL 11 
+#define op_DIV 12 
+#define op_EQUALITY 13 
+#define op_RELATIONAL 14 
+
