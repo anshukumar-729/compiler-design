@@ -387,10 +387,17 @@ static char *yy_last_accepting_cpos;
 #define YY_MORE_ADJ 0
 #define YY_RESTORE_YY_MORE_OFFSET
 char *yytext;
+<<<<<<< HEAD
 #line 1 ".\\newAnalyser.l"
 #define INITIAL 0
 /*Definition Section*/
 #line 3 ".\\newAnalyser.l"
+=======
+#line 1 ".\\lexical-analysis.l"
+#define INITIAL 0
+/*Definition Section*/
+#line 3 ".\\lexical-analysis.l"
+>>>>>>> 65cd800287b7280d4015d062b2959ea06b0f4bda
 	#include<stdio.h>
     #include "scanner.h"
     
@@ -546,9 +553,13 @@ YY_DECL
 	register char *yy_cp, *yy_bp;
 	register int yy_act;
 
+<<<<<<< HEAD
 #line 24 ".\\newAnalyser.l"
 
 
+=======
+#line 6 ".\\lexical-analysis.l"
+>>>>>>> 65cd800287b7280d4015d062b2959ea06b0f4bda
 
    
 
@@ -637,6 +648,7 @@ do_action:	/* This label is used only to access EOF actions. */
 
 case 1:
 YY_RULE_SETUP
+<<<<<<< HEAD
 #line 29 ".\\newAnalyser.l"
 return kw_PROGRAM;
 	YY_BREAK
@@ -728,6 +740,39 @@ return inval ;
 case 19:
 YY_RULE_SETUP
 #line 53 ".\\newAnalyser.l"
+=======
+#line 7 ".\\lexical-analysis.l"
+{printf("%s\tKEYWORD\n",yytext);} 						
+	YY_BREAK
+case 2:
+YY_RULE_SETUP
+#line 8 ".\\lexical-analysis.l"
+{printf("%s\tSEPERATOR\n",yytext);}	
+	YY_BREAK
+case 3:
+YY_RULE_SETUP
+#line 9 ".\\lexical-analysis.l"
+{printf("%s\t Number \n",yytext);}					
+	YY_BREAK
+case 4:
+YY_RULE_SETUP
+#line 11 ".\\lexical-analysis.l"
+{printf("%s\tOPERATOR\n",yytext);}						
+	YY_BREAK
+case 5:
+YY_RULE_SETUP
+#line 12 ".\\lexical-analysis.l"
+{printf("%s\tIdentifier\n",yytext);}    
+	YY_BREAK
+case 6:
+YY_RULE_SETUP
+#line 14 ".\\lexical-analysis.l"
+; 												
+	YY_BREAK
+case 7:
+YY_RULE_SETUP
+#line 15 ".\\lexical-analysis.l"
+>>>>>>> 65cd800287b7280d4015d062b2959ea06b0f4bda
 ECHO;
 	YY_BREAK
 #line 734 "lex.yy.c"
@@ -1616,7 +1661,11 @@ int main()
 	return 0;
 	}
 #endif
+<<<<<<< HEAD
 #line 53 ".\\newAnalyser.l"
+=======
+#line 15 ".\\lexical-analysis.l"
+>>>>>>> 65cd800287b7280d4015d062b2959ea06b0f4bda
 
 
 /*call the yywrap function*/
