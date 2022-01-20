@@ -1,7 +1,7 @@
 program addNumbers
 
 ! This simple program adds two numbers
-   implicit none
+   impliciT none
 
 ! Type declarations
    integer :: a, b, result
@@ -11,7 +11,7 @@ program addNumbers
    f="$5%"
    a = 9
    b = 1
-   if (a<b)then
+   if (a<B)then
    print *, 'The total is ', result
    else
       print *, f

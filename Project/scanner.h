@@ -1,4 +1,4 @@
-#define kw_PROGRAM  1 
+#define kw_PROGRAM 1 
 #define kw_IMPLICIT 2 
 #define kw_NONE 3 
 #define dt_REAL 4 
@@ -13,7 +13,6 @@
 #define op_EQUALITY 13 
 #define op_RELATIONAL 14 
 #define kw_IF 15
-<<<<<<< HEAD
 #define kw_ELSE 16
 #define kw_END 17
 #define kw_THEN 18
@@ -29,6 +28,28 @@
 #define sp_SQUARELB 28
 #define sp_SQUARERB 29
 #define nl 30
+#define kw_DO 31
+#define kw_LEN 32
+#define kw_KIND 33
+#define kw_CONTINUE 34
+#define kw_GOTO 35
+#define kw_RETURN 36
+#define kw_SELECT 37
+#define kw_CASE 38
+#define kw_FUNCTION 39
+#define kw_RESULT 40
+#define kw_INTENT 41
+#define kw_IN 42
+#define kw_OUT 43
+#define ct_INT 44
+#define ct_REAL 45
+#define ct_CHARACTER 46
+#define ct_COMPLEX 47
+#define ct_LOGICALS 48
+#define sp_COMMA 49
+#define sp_STOP 50
+#define kw_PRINT 51
+#define inval 52
 
 
 
@@ -38,5 +59,3 @@
 
 
 
-=======
->>>>>>> 50cee71161c1db6915c3a474b5395c8e272829a9
