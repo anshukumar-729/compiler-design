@@ -1,3 +1,11 @@
+# this file convert 
+# #define kw_PROGRAM 1 
+# to
+# else if(token==1)
+#            {
+#                    sprintf(buffer, "%s", "kw_PROGRAM");
+#            }
+
 n=int(input())
 l2=[]
 while(n>0):
