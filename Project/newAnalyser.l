@@ -97,11 +97,14 @@ int main(void)
     token = yylex();
     while(token){
         if (token!=19){
-        sprintf(buffer, "%d", token);
+        // sprintf(buffer, "%d", token);
         // fprintf (yyout,"%d",token);
         fprintf(yyout,"%s",yytext);
         fputs("\tThe token is \t",yyout);
-        fputs(buffer,yyout);
+        if (token==1){
+            fputs ("kw_PROGRAM",yyout);
+        }
+        // fputs(buffer,yyout);
         fputs("\ton line No - ",yyout);
         sprintf(buffer, "%d", yylineno);
         fputs(buffer,yyout);
