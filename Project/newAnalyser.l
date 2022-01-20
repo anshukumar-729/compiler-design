@@ -82,6 +82,7 @@ assignment_operator (([<>][<>]|[*\/%+\-&^|])[=]|[=])
 [-] return op_SUB;
 [*] return op_MUL;
 [/] return op_DIV;
+[%] return op_MODULUS;
 ([<>][=])|[<>] 	 return op_RELATIONAL;
 
 
@@ -323,6 +324,10 @@ int main(void)
             }
             else if(token==52)
                     {
+                    sprintf(buffer, "%s", "op_MODULUS");
+            }       
+            else if(token==53)
+                    {
                     sprintf(buffer, "%s", "inval");
             }
 
@@ -332,7 +337,7 @@ int main(void)
 
 
             // fprintf (yyout,"%d",token);
-            fputs("  ",yyout);
+            fputs("=> ",yyout);
             for(int i=0;i<strlen(yytext);i++){
                 int temp=yytext[i];
                 if (temp>64 && temp<91 && token!=46){
@@ -347,9 +352,9 @@ int main(void)
                     fputs(buffer3,yyout);
                 }
             }
-            fputs(" is ",yyout);
+            fputs(" => ",yyout);
             fputs(buffer,yyout);
-            fputs(" on line no - ",yyout);
+            fputs(" => line no ",yyout);
             sprintf(buffer, "%d", yylineno);
             fputs(buffer,yyout);
             fputs("\n",yyout);

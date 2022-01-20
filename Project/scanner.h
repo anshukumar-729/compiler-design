@@ -49,7 +49,8 @@
 #define sp_COMMA 49
 #define sp_STOP 50
 #define kw_PRINT 51
-#define inval 52
+#define op_MODULUS 52
+#define inval 53
 
 
 

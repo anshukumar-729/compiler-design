@@ -1,41 +1,143 @@
-  lp is IDENTIFIER on line no - 1
-  .8 is ct_REAL on line no - 2
-  [ is sp_SQUARELB on line no - 3
-  ] is sp_SQUARERB on line no - 3
-  ( is sp_LB on line no - 3
-  ) is sp_RB on line no - 3
-  { is sp_CURLYLB on line no - 3
-  } is sp_CURLYRB on line no - 3
-  "272vdvd1@" is ct_CHARACTER on line no - 4
-  8282 is ct_INT on line no - 5
-  , is sp_COMMA on line no - 6
-  12.0 is ct_REAL on line no - 7
-  true is ct_LOGICALS on line no - 8
-  real is dt_REAL on line no - 11
-  : is sp_COLON on line no - 11
-  : is sp_COLON on line no - 11
-  a is IDENTIFIER on line no - 11
-  , is sp_COMMA on line no - 11
-  b is IDENTIFIER on line no - 11
-  , is sp_COMMA on line no - 11
-  result is kw_RESULT on line no - 11
-  a is IDENTIFIER on line no - 14
-  = is op_EQUAL on line no - 14
-  9 is ct_INT on line no - 14
-  b is IDENTIFIER on line no - 15
-  = is op_EQUAL on line no - 15
-  15.0 is ct_REAL on line no - 15
-  result is kw_RESULT on line no - 16
-  = is op_EQUAL on line no - 16
-  a is IDENTIFIER on line no - 16
-  + is op_ADD on line no - 16
-  b is IDENTIFIER on line no - 16
-  print is kw_PRINT on line no - 17
-  * is op_MUL on line no - 17
-  , is sp_COMMA on line no - 17
-  'The total is ' is ct_CHARACTER on line no - 17
-  , is sp_COMMA on line no - 17
-  result is kw_RESULT on line no - 17
-  end is kw_END on line no - 19
-  program is kw_PROGRAM on line no - 19
-  addnumbers is IDENTIFIER on line no - 19
+=> program => kw_PROGRAM => line no 1
+=> derivedatatype => IDENTIFIER => line no 1
+=> type => kw_TYPE => line no 4
+=> books => IDENTIFIER => line no 4
+=> character => dt_CHARACTER => line no 5
+=> ( => sp_LB => line no 5
+=> len => kw_LEN => line no 5
+=> = => op_EQUAL => line no 5
+=> 50 => ct_INT => line no 5
+=> ) => sp_RB => line no 5
+=> : => sp_COLON => line no 5
+=> : => sp_COLON => line no 5
+=> title => IDENTIFIER => line no 5
+=> character => dt_CHARACTER => line no 6
+=> ( => sp_LB => line no 6
+=> len => kw_LEN => line no 6
+=> = => op_EQUAL => line no 6
+=> 50 => ct_INT => line no 6
+=> ) => sp_RB => line no 6
+=> : => sp_COLON => line no 6
+=> : => sp_COLON => line no 6
+=> author => IDENTIFIER => line no 6
+=> character => dt_CHARACTER => line no 7
+=> ( => sp_LB => line no 7
+=> len => kw_LEN => line no 7
+=> = => op_EQUAL => line no 7
+=> 150 => ct_INT => line no 7
+=> ) => sp_RB => line no 7
+=> : => sp_COLON => line no 7
+=> : => sp_COLON => line no 7
+=> subject => IDENTIFIER => line no 7
+=> integer => dt_INT => line no 8
+=> : => sp_COLON => line no 8
+=> : => sp_COLON => line no 8
+=> book_id => IDENTIFIER => line no 8
+=> end => kw_END => line no 9
+=> type => kw_TYPE => line no 9
+=> books => IDENTIFIER => line no 9
+=> type => kw_TYPE => line no 12
+=> ( => sp_LB => line no 12
+=> books => IDENTIFIER => line no 12
+=> ) => sp_RB => line no 12
+=> : => sp_COLON => line no 12
+=> : => sp_COLON => line no 12
+=> book1 => IDENTIFIER => line no 12
+=> type => kw_TYPE => line no 13
+=> ( => sp_LB => line no 13
+=> books => IDENTIFIER => line no 13
+=> ) => sp_RB => line no 13
+=> : => sp_COLON => line no 13
+=> : => sp_COLON => line no 13
+=> book2 => IDENTIFIER => line no 13
+=> book1 => IDENTIFIER => line no 17
+=> % => op_MODULUS => line no 17
+=> title => IDENTIFIER => line no 17
+=> = => op_EQUAL => line no 17
+=> "C Programming" => ct_CHARACTER => line no 17
+=> book1 => IDENTIFIER => line no 18
+=> % => op_MODULUS => line no 18
+=> author => IDENTIFIER => line no 18
+=> = => op_EQUAL => line no 18
+=> "Nuha Ali" => ct_CHARACTER => line no 18
+=> book1 => IDENTIFIER => line no 19
+=> % => op_MODULUS => line no 19
+=> subject => IDENTIFIER => line no 19
+=> = => op_EQUAL => line no 19
+=> "C Programming Tutorial" => ct_CHARACTER => line no 19
+=> book1 => IDENTIFIER => line no 20
+=> % => op_MODULUS => line no 20
+=> book_id => IDENTIFIER => line no 20
+=> = => op_EQUAL => line no 20
+=> 6495407 => ct_INT => line no 20
+=> book2 => IDENTIFIER => line no 22
+=> % => op_MODULUS => line no 22
+=> title => IDENTIFIER => line no 22
+=> = => op_EQUAL => line no 22
+=> "Telecom Billing" => ct_CHARACTER => line no 22
+=> book2 => IDENTIFIER => line no 23
+=> % => op_MODULUS => line no 23
+=> author => IDENTIFIER => line no 23
+=> = => op_EQUAL => line no 23
+=> "Zara Ali" => ct_CHARACTER => line no 23
+=> book2 => IDENTIFIER => line no 24
+=> % => op_MODULUS => line no 24
+=> subject => IDENTIFIER => line no 24
+=> = => op_EQUAL => line no 24
+=> "Telecom Billing Tutorial" => ct_CHARACTER => line no 24
+=> book2 => IDENTIFIER => line no 25
+=> % => op_MODULUS => line no 25
+=> book_id => IDENTIFIER => line no 25
+=> = => op_EQUAL => line no 25
+=> 6495700 => ct_INT => line no 25
+=> print => kw_PRINT => line no 29
+=> * => op_MUL => line no 29
+=> , => sp_COMMA => line no 29
+=> book1 => IDENTIFIER => line no 29
+=> % => op_MODULUS => line no 29
+=> title => IDENTIFIER => line no 29
+=> print => kw_PRINT => line no 30
+=> * => op_MUL => line no 30
+=> , => sp_COMMA => line no 30
+=> book1 => IDENTIFIER => line no 30
+=> % => op_MODULUS => line no 30
+=> author => IDENTIFIER => line no 30
+=> print => kw_PRINT => line no 31
+=> * => op_MUL => line no 31
+=> , => sp_COMMA => line no 31
+=> book1 => IDENTIFIER => line no 31
+=> % => op_MODULUS => line no 31
+=> subject => IDENTIFIER => line no 31
+=> print => kw_PRINT => line no 32
+=> * => op_MUL => line no 32
+=> , => sp_COMMA => line no 32
+=> book1 => IDENTIFIER => line no 32
+=> % => op_MODULUS => line no 32
+=> book_id => IDENTIFIER => line no 32
+=> print => kw_PRINT => line no 34
+=> * => op_MUL => line no 34
+=> , => sp_COMMA => line no 34
+=> book2 => IDENTIFIER => line no 34
+=> % => op_MODULUS => line no 34
+=> title => IDENTIFIER => line no 34
+=> print => kw_PRINT => line no 35
+=> * => op_MUL => line no 35
+=> , => sp_COMMA => line no 35
+=> book2 => IDENTIFIER => line no 35
+=> % => op_MODULUS => line no 35
+=> author => IDENTIFIER => line no 35
+=> print => kw_PRINT => line no 36
+=> * => op_MUL => line no 36
+=> , => sp_COMMA => line no 36
+=> book2 => IDENTIFIER => line no 36
+=> % => op_MODULUS => line no 36
+=> subject => IDENTIFIER => line no 36
+=> print => kw_PRINT => line no 37
+=> * => op_MUL => line no 37
+=> , => sp_COMMA => line no 37
+=> book2 => IDENTIFIER => line no 37
+=> % => op_MODULUS => line no 37
+=> book_id => IDENTIFIER => line no 37
+=> end => kw_END => line no 39
+=> program => kw_PROGRAM => line no 39
+=> derivedatatype => IDENTIFIER => line no 39
