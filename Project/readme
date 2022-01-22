@@ -1,0 +1,111 @@
+In this assignment, there are four files :
+    1. input.txt
+    2. lexical-analyser.l
+    3. output.txt
+    4. scanner.h
+
+input file contains: A sample fortran program.
+lexical-analyser.l file contains: Our lex programm which converts all the lexeme present in the input file to a specific tokens.
+scanner.h file contains: All the tokens assocciated with a specific number.
+output.txt file contains: All the lexemes, its tokens and its line no in the given file.
+
+Our lex file takes input.txt file as input which is written in fortran Programming language.
+Since Fortran language is case insensitive, so we first convert all the character into lower case character.
+Now the lex compiler is converting all the words present in the file to the stream of tokens.
+Working of our lex file is:
+    It take word by word from the input file and then the programm mathes that word with a regular expression defined in the lexical-analyser file.
+    eg:
+        When our lexer takes a word "Program" which is present in the input file and it begins to find a regex for this word and finally matched with [pP][Rr][oO][Gg][rR][aA][Mm] regex and return "kw_PROGRAM". If a matching regex is not present then it return "inval".
+        
+    Once the word matches with a regex it converts that word into specific token which gives a logical meaning of that word.
+    And we also store the line no of that word present in the input file.
+    Then our output.txt file shows all the lexemes, its tokens and its line no in the given file.
+
+
+
+
+eg:
+
+input.txt
+
+    program addNumbers
+
+! This simple program adds two numbers
+   impliciT none
+
+! Type declarations
+   integer :: a, b, result
+   character(len=10) :: f
+
+! Executable statements
+   f="$5%"
+   a = 9
+   b = 1
+   if (a<B)then
+   print *, 'The total is ', result
+   else
+      print *, f
+   end if
+end program addNumbers
+
+
+
+
+
+
+output.txt
+
+
+=> program => kw_PROGRAM => line no 1
+=> addnumbers => IDENTIFIER => line no 1
+=> implicit => kw_IMPLICIT => line no 4
+=> none => kw_NONE => line no 4
+=> integer => dt_INT => line no 7
+=> : => sp_COLON => line no 7
+=> : => sp_COLON => line no 7
+=> a => IDENTIFIER => line no 7
+=> , => sp_COMMA => line no 7
+=> b => IDENTIFIER => line no 7
+=> , => sp_COMMA => line no 7
+=> result => kw_RESULT => line no 7
+=> character => dt_CHARACTER => line no 8
+=> ( => sp_LB => line no 8
+=> len => kw_LEN => line no 8
+=> = => op_EQUAL => line no 8
+=> 10 => ct_INT => line no 8
+=> ) => sp_RB => line no 8
+=> : => sp_COLON => line no 8
+=> : => sp_COLON => line no 8
+=> f => IDENTIFIER => line no 8
+=> f => IDENTIFIER => line no 11
+=> = => op_EQUAL => line no 11
+=> "$5%" => ct_CHARACTER => line no 11
+=> a => IDENTIFIER => line no 12
+=> = => op_EQUAL => line no 12
+=> 9 => ct_INT => line no 12
+=> b => IDENTIFIER => line no 13
+=> = => op_EQUAL => line no 13
+=> 1 => ct_INT => line no 13
+=> if => kw_IF => line no 14
+=> ( => sp_LB => line no 14
+=> a => IDENTIFIER => line no 14
+=> < => op_RELATIONAL => line no 14
+=> b => IDENTIFIER => line no 14
+=> ) => sp_RB => line no 14
+=> then => kw_THEN => line no 14
+=> print => kw_PRINT => line no 15
+=> * => op_MUL => line no 15
+=> , => sp_COMMA => line no 15
+=> 'The total is ' => ct_CHARACTER => line no 15
+=> , => sp_COMMA => line no 15
+=> result => kw_RESULT => line no 15
+=> else => kw_ELSE => line no 16
+=> print => kw_PRINT => line no 17
+=> * => op_MUL => line no 17
+=> , => sp_COMMA => line no 17
+=> f => IDENTIFIER => line no 17
+=> end => kw_END => line no 18
+=> if => kw_IF => line no 18
+=> end => kw_END => line no 19
+=> program => kw_PROGRAM => line no 19
+=> addnumbers => IDENTIFIER => line no 19

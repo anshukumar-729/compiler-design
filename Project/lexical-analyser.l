@@ -1,30 +1,27 @@
 /*Definition Section*/
 %{
-	#include<stdio.h>
+    #include<stdio.h>
     #include<string.h>
     #include "scanner.h"
     
 %}
 /*Rule Section*/
 
+/* defining some regular expression */
 
 digit [0-9]
 alpha [a-zA-Z]
-identifier		[a-zA-Z][0-9a-zA-Z_]*
-variable            [$@%]+[0-9a-zA-Z_]+
-positive_int 	[0]|[1-9][0-9]*
-number  		{digit}{digit}*
-real 			{positive_int}"."{number}+[Ee]?[+-]?[1-9]*?
-common_chars			[^'"\\]
-escape_chars			"\\n"|"\\t"|"\\r"|"\\\'"|"\\\""|"\\\\"
-assignment_operator (([<>][<>]|[*\/%+\-&^|])[=]|[=])
+identifier [a-zA-Z_][0-9a-zA-Z_]*
+variable [$@%]+[0-9a-zA-Z_]+
+positive_int [0]|[1-9][0-9]*
+number {digit}{digit}*
+real {positive_int}"."{number}+[Ee]?[+-]?[1-9]*?
+
 
 
 
 
 %%
-
-
 
 [pP][Rr][oO][Gg][rR][aA][Mm] return kw_PROGRAM;
 [Ii][Mm][Pp][Ll][Ii][Cc][Ii][Tt] return kw_IMPLICIT;
@@ -49,8 +46,6 @@ assignment_operator (([<>][<>]|[*\/%+\-&^|])[=]|[=])
 [Oo][Uu][Tt] return kw_OUT;
 [Pp][Rr][Ii][Nn][Tt] return kw_PRINT;
 
-
-
 [Ii][Nn][Tt][Ee][Gg][Ee][Rr] return dt_INT;
 [Rr][Ee][Aa][Ll] return dt_REAL;
 [Cc][Oo][Mm][Pp][Ll][Ee][Xx] return dt_COMPLEX;
@@ -58,7 +53,7 @@ assignment_operator (([<>][<>]|[*\/%+\-&^|])[=]|[=])
 [Cc][Hh][Aa][Rr][Aa][Cc][Tt][Ee][Rr] return dt_CHARACTER;
 
 {digit}*[,]({digit}*[i]|[i]{digit}*) return ct_COMPLEX;
-{digit}*[.]{digit}{digit}* return ct_REAL;
+{real} return ct_REAL;
 {digit}* return ct_INT;
 ['].*[']|["].*["] return ct_CHARACTER;
 [Tt][Rr][Uu][Ee]|[Ff][Aa][Ll][Ss][Ee] return ct_LOGICALS;
@@ -75,7 +70,6 @@ assignment_operator (([<>][<>]|[*\/%+\-&^|])[=]|[=])
 [[] return sp_SQUARELB;
 []] return sp_SQUARERB;
 
-
 [=][=] return op_EQUALITY;
 [=] return op_EQUAL;
 [+] return op_ADD;
@@ -85,13 +79,9 @@ assignment_operator (([<>][<>]|[*\/%+\-&^|])[=]|[=])
 [%] return op_MODULUS;
 ([<>][=])|[<>] 	 return op_RELATIONAL;
 
-
-
-
-
 [\n] return nl;
 [ \t]+|[!].* ;
-.      return inval ;
+. return inval ;
 												
 %%
 
@@ -104,10 +94,7 @@ int yywrap()
 int main(void)
 {
     int token;
-  
-
     extern FILE *yyin, *yyout;
-
     int yylineno = 1 ;
     yyin = fopen("input.txt", "r");  
     yyout = fopen("output.txt", "w");    
@@ -234,10 +221,6 @@ int main(void)
                     {
                     sprintf(buffer, "%s", "sp_SQUARERB");
             }
-            else if(token==30)
-                    {
-                    sprintf(buffer, "%s", "nl");
-            }
             else if(token==31)
                     {
                     sprintf(buffer, "%s", "kw_DO");
@@ -351,13 +334,13 @@ int main(void)
                     sprintf(buffer3,"%c",buffer2);
                     fputs(buffer3,yyout);
                 }
-            }
-            fputs(" => ",yyout);
-            fputs(buffer,yyout);
-            fputs(" => line no ",yyout);
-            sprintf(buffer, "%d", yylineno);
-            fputs(buffer,yyout);
-            fputs("\n",yyout);
+             }
+                fputs(" => ",yyout);
+                fputs(buffer,yyout);
+                fputs(" => line no ",yyout);
+                sprintf(buffer, "%d", yylineno);
+                fputs(buffer,yyout);
+                fputs("\n",yyout);
         }
         else{
         yylineno++;
