@@ -28,12 +28,3 @@
 #define sp_SQUARELB 28
 #define sp_SQUARERB 29
 #define nl 30
-
-
-
-
-
-
-
-
-
