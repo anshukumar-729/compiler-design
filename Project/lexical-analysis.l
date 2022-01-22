@@ -8,10 +8,10 @@
 
 "{"|"}"|";"|","|"("|")"   {printf("%s\tSEPERATOR\n",yytext);}	
 [0-9]+ {printf("%s\t Number \n",yytext);}					
-
+// using addition operators
 "+"|"-"|"/"|"="|"*"|"%"   {printf("%s\tOPERATOR\n",yytext);}						
 [a-zA-Z][0-9]+|[a-zA-Z]* {printf("%s\tIdentifier\n",yytext);}    
-
+//
 .|\n ; 												
 %%
 
