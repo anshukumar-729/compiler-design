@@ -77,10 +77,11 @@ real {positive_int}"."{number}+[Ee]?[+-]?[1-9]*?
 [*] return op_MUL;
 [/] return op_DIV;
 [%] return op_MODULUS;
-([<>][=])|[<>] 	 return op_RELATIONAL;
+([<>][=])|[<>] 	return op_RELATIONAL;
 
 [\n] return nl;
-[ \t]+|[!].* ;
+[!].* return COMMENT;
+[ \t]+ ;
 . return inval ;
 												
 %%
@@ -312,6 +313,10 @@ int main(void)
             else if(token==53)
                     {
                     sprintf(buffer, "%s", "inval");
+            }
+            else if(token==54)
+            {
+                    sprintf(buffer, "%s", "COMMENT");
             }
 
             else{

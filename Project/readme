@@ -6,7 +6,7 @@ In this assignment, there are four files :
 
 input file contains: A sample fortran program.
 lexical-analyser.l file contains: Our lex programm which converts all the lexeme present in the input file to a specific tokens.
-scanner.h file contains: All the tokens assocciated with a specific number.
+scanner.h file contains: All the defined tokens assocciated with a specific number.
 output.txt file contains: All the lexemes, its tokens and its line no in the given file.
 
 Our lex file takes input.txt file as input which is written in fortran Programming language.
@@ -55,11 +55,12 @@ end program addNumbers
 
 output.txt
 
-
 => program => kw_PROGRAM => line no 1
 => addnumbers => IDENTIFIER => line no 1
+=> ! this simple program adds two numbers => COMMENT => line no 3
 => implicit => kw_IMPLICIT => line no 4
 => none => kw_NONE => line no 4
+=> ! type declarations => COMMENT => line no 6
 => integer => dt_INT => line no 7
 => : => sp_COLON => line no 7
 => : => sp_COLON => line no 7
@@ -77,6 +78,7 @@ output.txt
 => : => sp_COLON => line no 8
 => : => sp_COLON => line no 8
 => f => IDENTIFIER => line no 8
+=> ! executable statements => COMMENT => line no 10
 => f => IDENTIFIER => line no 11
 => = => op_EQUAL => line no 11
 => "$5%" => ct_CHARACTER => line no 11

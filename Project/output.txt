@@ -1,7 +1,9 @@
 => program => kw_PROGRAM => line no 1
 => addnumbers => IDENTIFIER => line no 1
+=> ! this simple program adds two numbers => COMMENT => line no 3
 => implicit => kw_IMPLICIT => line no 4
 => none => kw_NONE => line no 4
+=> ! type declarations => COMMENT => line no 6
 => integer => dt_INT => line no 7
 => : => sp_COLON => line no 7
 => : => sp_COLON => line no 7
@@ -19,6 +21,7 @@
 => : => sp_COLON => line no 8
 => : => sp_COLON => line no 8
 => f => IDENTIFIER => line no 8
+=> ! executable statements => COMMENT => line no 10
 => f => IDENTIFIER => line no 11
 => = => op_EQUAL => line no 11
 => "$5%" => ct_CHARACTER => line no 11

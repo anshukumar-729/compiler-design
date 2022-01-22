@@ -51,6 +51,7 @@
 #define kw_PRINT 51
 #define op_MODULUS 52
 #define inval 53
+#define COMMENT 54
 
 
 

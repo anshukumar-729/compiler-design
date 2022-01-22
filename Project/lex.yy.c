@@ -351,8 +351,8 @@ static void yynoreturn yy_fatal_error ( const char* msg  );
 	(yy_hold_char) = *yy_cp; \
 	*yy_cp = '\0'; \
 	(yy_c_buf_p) = yy_cp;
-#define YY_NUM_RULES 55
-#define YY_END_OF_BUFFER 56
+#define YY_NUM_RULES 56
+#define YY_END_OF_BUFFER 57
 /* This struct is not used in this scanner,
    but its presence is necessary. */
 struct yy_trans_info
@@ -362,11 +362,11 @@ struct yy_trans_info
 	};
 static const flex_int16_t yy_accept[177] =
     {   0,
-       30,   30,   56,   54,   53,   52,   53,   54,   50,   54,
+       30,   30,   57,   55,   54,   52,   53,   55,   50,   55,
        38,   39,   48,   46,   35,   47,   36,   49,   30,   30,
        34,   37,   51,   45,   33,   33,   33,   33,   33,   33,
        33,   33,   33,   33,   33,   33,   33,   33,   33,   42,
-       43,   40,   41,   53,   53,    0,   31,    0,   31,    0,
+       43,   40,   41,   54,   53,    0,   31,    0,   31,    0,
        28,    0,    0,   30,   30,   51,   44,   33,   33,   33,
        33,    9,   33,   33,   33,   33,    4,   33,   20,   33,
        33,   33,   33,   33,   33,   33,   33,   33,   33,   33,
@@ -781,7 +781,7 @@ YY_DECL
 		}
 
 	{
-#line 26 "lexical-analyser.l"
+#line 24 "lexical-analyser.l"
 
 
 #line 788 "lex.yy.c"
@@ -843,281 +843,286 @@ do_action:	/* This label is used only to access EOF actions. */
 
 case 1:
 YY_RULE_SETUP
-#line 28 "lexical-analyser.l"
+#line 26 "lexical-analyser.l"
 return kw_PROGRAM;
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
-#line 29 "lexical-analyser.l"
+#line 27 "lexical-analyser.l"
 return kw_IMPLICIT;
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
-#line 30 "lexical-analyser.l"
+#line 28 "lexical-analyser.l"
 return kw_NONE;
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
-#line 31 "lexical-analyser.l"
+#line 29 "lexical-analyser.l"
 return kw_IF;
 	YY_BREAK
 case 5:
 YY_RULE_SETUP
-#line 32 "lexical-analyser.l"
+#line 30 "lexical-analyser.l"
 return kw_ELSE;
 	YY_BREAK
 case 6:
 YY_RULE_SETUP
-#line 33 "lexical-analyser.l"
+#line 31 "lexical-analyser.l"
 return kw_END;
 	YY_BREAK
 case 7:
 YY_RULE_SETUP
-#line 34 "lexical-analyser.l"
+#line 32 "lexical-analyser.l"
 return kw_THEN;
 	YY_BREAK
 case 8:
 YY_RULE_SETUP
-#line 35 "lexical-analyser.l"
+#line 33 "lexical-analyser.l"
 return kw_TYPE;
 	YY_BREAK
 case 9:
 YY_RULE_SETUP
-#line 36 "lexical-analyser.l"
+#line 34 "lexical-analyser.l"
 return kw_DO;
 	YY_BREAK
 case 10:
 YY_RULE_SETUP
-#line 37 "lexical-analyser.l"
+#line 35 "lexical-analyser.l"
 return kw_LEN;
 	YY_BREAK
 case 11:
 YY_RULE_SETUP
-#line 38 "lexical-analyser.l"
+#line 36 "lexical-analyser.l"
 return kw_KIND;
 	YY_BREAK
 case 12:
 YY_RULE_SETUP
-#line 39 "lexical-analyser.l"
+#line 37 "lexical-analyser.l"
 return kw_CONTINUE;
 	YY_BREAK
 case 13:
 YY_RULE_SETUP
-#line 40 "lexical-analyser.l"
+#line 38 "lexical-analyser.l"
 return kw_GOTO;
 	YY_BREAK
 case 14:
 YY_RULE_SETUP
-#line 41 "lexical-analyser.l"
+#line 39 "lexical-analyser.l"
 return kw_RETURN;
 	YY_BREAK
 case 15:
 YY_RULE_SETUP
-#line 42 "lexical-analyser.l"
+#line 40 "lexical-analyser.l"
 return kw_SELECT;
 	YY_BREAK
 case 16:
 YY_RULE_SETUP
-#line 43 "lexical-analyser.l"
+#line 41 "lexical-analyser.l"
 return kw_CASE;
 	YY_BREAK
 case 17:
 YY_RULE_SETUP
-#line 44 "lexical-analyser.l"
+#line 42 "lexical-analyser.l"
 return kw_FUNCTION;
 	YY_BREAK
 case 18:
 YY_RULE_SETUP
-#line 45 "lexical-analyser.l"
+#line 43 "lexical-analyser.l"
 return kw_RESULT;
 	YY_BREAK
 case 19:
 YY_RULE_SETUP
-#line 46 "lexical-analyser.l"
+#line 44 "lexical-analyser.l"
 return kw_INTENT;
 	YY_BREAK
 case 20:
 YY_RULE_SETUP
-#line 47 "lexical-analyser.l"
+#line 45 "lexical-analyser.l"
 return kw_IN;
 	YY_BREAK
 case 21:
 YY_RULE_SETUP
-#line 48 "lexical-analyser.l"
+#line 46 "lexical-analyser.l"
 return kw_OUT;
 	YY_BREAK
 case 22:
 YY_RULE_SETUP
-#line 49 "lexical-analyser.l"
+#line 47 "lexical-analyser.l"
 return kw_PRINT;
 	YY_BREAK
 case 23:
 YY_RULE_SETUP
-#line 51 "lexical-analyser.l"
+#line 49 "lexical-analyser.l"
 return dt_INT;
 	YY_BREAK
 case 24:
 YY_RULE_SETUP
-#line 52 "lexical-analyser.l"
+#line 50 "lexical-analyser.l"
 return dt_REAL;
 	YY_BREAK
 case 25:
 YY_RULE_SETUP
-#line 53 "lexical-analyser.l"
+#line 51 "lexical-analyser.l"
 return dt_COMPLEX;
 	YY_BREAK
 case 26:
 YY_RULE_SETUP
-#line 54 "lexical-analyser.l"
+#line 52 "lexical-analyser.l"
 return dt_LOGICALS;
 	YY_BREAK
 case 27:
 YY_RULE_SETUP
-#line 55 "lexical-analyser.l"
+#line 53 "lexical-analyser.l"
 return dt_CHARACTER;
 	YY_BREAK
 case 28:
 YY_RULE_SETUP
-#line 57 "lexical-analyser.l"
+#line 55 "lexical-analyser.l"
 return ct_COMPLEX;
 	YY_BREAK
 case 29:
 YY_RULE_SETUP
-#line 58 "lexical-analyser.l"
+#line 56 "lexical-analyser.l"
 return ct_REAL;
 	YY_BREAK
 case 30:
 YY_RULE_SETUP
-#line 59 "lexical-analyser.l"
+#line 57 "lexical-analyser.l"
 return ct_INT;
 	YY_BREAK
 case 31:
 YY_RULE_SETUP
-#line 60 "lexical-analyser.l"
+#line 58 "lexical-analyser.l"
 return ct_CHARACTER;
 	YY_BREAK
 case 32:
 YY_RULE_SETUP
-#line 61 "lexical-analyser.l"
+#line 59 "lexical-analyser.l"
 return ct_LOGICALS;
 	YY_BREAK
 case 33:
 YY_RULE_SETUP
-#line 62 "lexical-analyser.l"
+#line 60 "lexical-analyser.l"
 return IDENTIFIER;
 	YY_BREAK
 case 34:
 YY_RULE_SETUP
-#line 64 "lexical-analyser.l"
+#line 62 "lexical-analyser.l"
 return sp_COLON;
 	YY_BREAK
 case 35:
 YY_RULE_SETUP
-#line 65 "lexical-analyser.l"
+#line 63 "lexical-analyser.l"
 return sp_COMMA;
 	YY_BREAK
 case 36:
 YY_RULE_SETUP
-#line 66 "lexical-analyser.l"
+#line 64 "lexical-analyser.l"
 return sp_STOP;
 	YY_BREAK
 case 37:
 YY_RULE_SETUP
-#line 67 "lexical-analyser.l"
+#line 65 "lexical-analyser.l"
 return sp_SEMICOLON;
 	YY_BREAK
 case 38:
 YY_RULE_SETUP
-#line 68 "lexical-analyser.l"
+#line 66 "lexical-analyser.l"
 return sp_LB;
 	YY_BREAK
 case 39:
 YY_RULE_SETUP
-#line 69 "lexical-analyser.l"
+#line 67 "lexical-analyser.l"
 return sp_RB;
 	YY_BREAK
 case 40:
 YY_RULE_SETUP
-#line 70 "lexical-analyser.l"
+#line 68 "lexical-analyser.l"
 return sp_CURLYLB;
 	YY_BREAK
 case 41:
 YY_RULE_SETUP
-#line 71 "lexical-analyser.l"
+#line 69 "lexical-analyser.l"
 return sp_CURLYRB;
 	YY_BREAK
 case 42:
 YY_RULE_SETUP
-#line 72 "lexical-analyser.l"
+#line 70 "lexical-analyser.l"
 return sp_SQUARELB;
 	YY_BREAK
 case 43:
 YY_RULE_SETUP
-#line 73 "lexical-analyser.l"
+#line 71 "lexical-analyser.l"
 return sp_SQUARERB;
 	YY_BREAK
 case 44:
 YY_RULE_SETUP
-#line 75 "lexical-analyser.l"
+#line 73 "lexical-analyser.l"
 return op_EQUALITY;
 	YY_BREAK
 case 45:
 YY_RULE_SETUP
-#line 76 "lexical-analyser.l"
+#line 74 "lexical-analyser.l"
 return op_EQUAL;
 	YY_BREAK
 case 46:
 YY_RULE_SETUP
-#line 77 "lexical-analyser.l"
+#line 75 "lexical-analyser.l"
 return op_ADD;
 	YY_BREAK
 case 47:
 YY_RULE_SETUP
-#line 78 "lexical-analyser.l"
+#line 76 "lexical-analyser.l"
 return op_SUB;
 	YY_BREAK
 case 48:
 YY_RULE_SETUP
-#line 79 "lexical-analyser.l"
+#line 77 "lexical-analyser.l"
 return op_MUL;
 	YY_BREAK
 case 49:
 YY_RULE_SETUP
-#line 80 "lexical-analyser.l"
+#line 78 "lexical-analyser.l"
 return op_DIV;
 	YY_BREAK
 case 50:
 YY_RULE_SETUP
-#line 81 "lexical-analyser.l"
+#line 79 "lexical-analyser.l"
 return op_MODULUS;
 	YY_BREAK
 case 51:
 YY_RULE_SETUP
-#line 82 "lexical-analyser.l"
+#line 80 "lexical-analyser.l"
 return op_RELATIONAL;
 	YY_BREAK
 case 52:
 /* rule 52 can match eol */
 YY_RULE_SETUP
-#line 84 "lexical-analyser.l"
+#line 82 "lexical-analyser.l"
 return nl;
 	YY_BREAK
 case 53:
 YY_RULE_SETUP
-#line 85 "lexical-analyser.l"
-;
+#line 83 "lexical-analyser.l"
+return COMMENT;
 	YY_BREAK
 case 54:
 YY_RULE_SETUP
-#line 86 "lexical-analyser.l"
-return inval ;
+#line 84 "lexical-analyser.l"
+;
 	YY_BREAK
 case 55:
 YY_RULE_SETUP
-#line 88 "lexical-analyser.l"
+#line 85 "lexical-analyser.l"
+return inval ;
+	YY_BREAK
+case 56:
+YY_RULE_SETUP
+#line 87 "lexical-analyser.l"
 ECHO;
 	YY_BREAK
-#line 1121 "lex.yy.c"
+#line 1126 "lex.yy.c"
 case YY_STATE_EOF(INITIAL):
 	yyterminate();
 
@@ -2122,7 +2127,7 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 88 "lexical-analyser.l"
+#line 87 "lexical-analyser.l"
 
 
 /*call the yywrap function*/
@@ -2352,6 +2357,10 @@ int main(void)
             else if(token==53)
                     {
                     sprintf(buffer, "%s", "inval");
+            }
+            else if(token==54)
+            {
+                    sprintf(buffer, "%s", "COMMENT");
             }
 
             else{
