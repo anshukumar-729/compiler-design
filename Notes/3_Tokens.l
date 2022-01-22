@@ -1,6 +1,7 @@
 /*Definition Section*/
 %{
-	#include<stdio.h>
+	#include<stdio.h>;
+	#define type 1;
 %}
 /*Rule Section*/
 %%
