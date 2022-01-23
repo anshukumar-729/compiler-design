@@ -646,7 +646,7 @@ char *yytext;
 #line 3 "lexical-analyser.l"
     #include<stdio.h>
     #include<string.h>
-    #include "scanner.h"
+    #include "scanner.h" /* this file contains all tokens */
     
 #line 652 "lex.yy.c"
 /*Rule Section*/
@@ -2281,17 +2281,22 @@ int yywrap()
 int main(void)
 {
     int token;
-    extern FILE *yyin, *yyout;
     int yylineno = 1 ;
+
+    // file handling
+    extern FILE *yyin, *yyout;
     yyin = fopen("input.txt", "r");  
-    yyout = fopen("output.txt", "w");    
+    yyout = fopen("output.txt", "w");  
+
+    // some temporary variables  
     char buffer[40] = {0}; 
     char buffer3[16] = {0}; 
     char buffer2;
+    
     token = yylex();
     while(token){
         if (token!=30){
-            // all tokens are here
+            // Retrieving all token through their defined numbers
             if(token==1)
             {
                     sprintf(buffer, "%s", "kw_PROGRAM");
@@ -2544,13 +2549,25 @@ int main(void)
                         {
                         sprintf(buffer, "%s", "op_NEQV");
                 }
+                else if(token==65)
+                {
+                        sprintf(buffer, "%s", "kw_DIMENSION");
+                }
+                else if(token==66)
+                        {
+                        sprintf(buffer, "%s", "kw_POINTER");
+                }
             else{
                 sprintf(buffer, "%d", token);
             }
 
 
-            // fprintf (yyout,"%d",token);
+// Writing into File start
             fputs("=> ",yyout);
+
+ //// Since our language is case insensitive we converting all the UpperCase character into LowerCase character
+
+        // Conversion Start
             for(int i=0;i<strlen(yytext);i++){
                 int temp=yytext[i];
                 if (temp>64 && temp<91 && token!=46){
@@ -2565,17 +2582,27 @@ int main(void)
                     fputs(buffer3,yyout);
                 }
              }
+        // Conversion end
+
                 fputs(" => ",yyout);
                 fputs(buffer,yyout);
                 fputs(" => line no ",yyout);
                 sprintf(buffer, "%d", yylineno);
                 fputs(buffer,yyout);
                 fputs("\n",yyout);
+// Writing into file end
+
         }
         else{
+
+        // increasing countint of line when new line detected 
         yylineno++;
+
         }
+
+        //  calling function again to find another lexeme
         token = yylex();
+
     }
 	
 	return 0;
