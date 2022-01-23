@@ -54,9 +54,9 @@ real {positive_int}"."{number}+[Ee]?[+-]?[1-9]*?
 [Ll][Oo][Gg][Ii][Cc][Aa][Ll] return dt_LOGICALS;
 [Cc][Hh][Aa][Rr][Aa][Cc][Tt][Ee][Rr] return dt_CHARACTER;
 
-{real}*[,]({real}*[i]|[i]{real}*) return ct_COMPLEX;
-{real} return ct_REAL;
-{digit}* return ct_INT;
+({real}*|[-]{real}*)[,](([-]{real}*|{real}*)[i]|[i]([-]{real}*|{real}*)) return ct_COMPLEX;
+{real}|[-]{real} return ct_REAL;
+{digit}*|[-]{digit} return ct_INT;
 ['].*[']|["].*["] return ct_CHARACTER;
 [.]([Tt][Rr][Uu][Ee]|[Ff][Aa][Ll][Ss][Ee])[.] return ct_LOGICALS;
 {identifier} return IDENTIFIER;

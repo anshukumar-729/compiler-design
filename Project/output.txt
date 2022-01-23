@@ -3,87 +3,98 @@
  1                   kw_PROGRAM          program             
  1                   IDENTIFIER          gravitationaldisp   
 
- 3                   COMMENT             ! this program calculates vertical motion under gravity 
+ 2                   sp_LB               (                   
+ 2                   ct_COMPLEX          -2.3,-i             
+ 2                   ct_INT              9                   
+ 2                   sp_RB               )                   
 
- 4                   kw_IMPLICIT         implicit            
- 4                   kw_NONE             none                
+ 3                   ct_REAL             3.4                 
 
- 6                   COMMENT             ! gravitational acceleration
+ 4                   ct_REAL             -3.4                
 
- 7                   dt_REAL             real                
- 7                   sp_COMMA            ,                   
- 7                   IDENTIFIER          parameter           
- 7                   sp_COLON            :                   
- 7                   sp_COLON            :                   
- 7                   IDENTIFIER          g                   
- 7                   op_EQUAL            =                   
- 7                   ct_REAL             9.81                
+ 5                   ct_INT              -4                  
 
- 9                   COMMENT             ! variable declaration
+ 6                   COMMENT             ! this program calculates vertical motion under gravity 
+
+ 7                   kw_IMPLICIT         implicit            
+ 7                   kw_NONE             none                
+
+ 9                   COMMENT             ! gravitational acceleration
 
  10                  dt_REAL             real                
+ 10                  sp_COMMA            ,                   
+ 10                  IDENTIFIER          parameter           
  10                  sp_COLON            :                   
  10                  sp_COLON            :                   
- 10                  IDENTIFIER          s                   
- 10                  COMMENT             ! displacement      
+ 10                  IDENTIFIER          g                   
+ 10                  op_EQUAL            =                   
+ 10                  ct_REAL             9.81                
 
- 11                  dt_REAL             real                
- 11                  sp_COLON            :                   
- 11                  sp_COLON            :                   
- 11                  IDENTIFIER          t                   
- 11                  COMMENT             ! time              
+ 12                  COMMENT             ! variable declaration
 
- 12                  dt_REAL             real                
- 12                  sp_COLON            :                   
- 12                  sp_COLON            :                   
- 12                  IDENTIFIER          u                   
- 12                  COMMENT             ! initial speed     
+ 13                  dt_REAL             real                
+ 13                  sp_COLON            :                   
+ 13                  sp_COLON            :                   
+ 13                  IDENTIFIER          s                   
+ 13                  COMMENT             ! displacement      
 
- 14                  COMMENT             ! assigning values  
+ 14                  dt_REAL             real                
+ 14                  sp_COLON            :                   
+ 14                  sp_COLON            :                   
+ 14                  IDENTIFIER          t                   
+ 14                  COMMENT             ! time              
 
- 15                  IDENTIFIER          t                   
- 15                  op_EQUAL            =                   
- 15                  ct_REAL             5.0                 
+ 15                  dt_REAL             real                
+ 15                  sp_COLON            :                   
+ 15                  sp_COLON            :                   
+ 15                  IDENTIFIER          u                   
+ 15                  COMMENT             ! initial speed     
 
- 16                  IDENTIFIER          u                   
- 16                  op_EQUAL            =                   
- 16                  ct_INT              50                  
+ 17                  COMMENT             ! assigning values  
 
- 18                  COMMENT             ! displacement      
+ 18                  IDENTIFIER          t                   
+ 18                  op_EQUAL            =                   
+ 18                  ct_REAL             5.0                 
 
- 19                  IDENTIFIER          s                   
- 19                  op_EQUAL            =                   
  19                  IDENTIFIER          u                   
- 19                  op_MUL              *                   
- 19                  IDENTIFIER          t                   
- 19                  op_SUB              -                   
- 19                  IDENTIFIER          g                   
- 19                  op_MUL              *                   
- 19                  sp_LB               (                   
- 19                  IDENTIFIER          t                   
- 19                  op_MUL              *                   
- 19                  op_MUL              *                   
- 19                  ct_INT              2                   
- 19                  sp_RB               )                   
- 19                  op_DIV              /                   
- 19                  ct_INT              2                   
+ 19                  op_EQUAL            =                   
+ 19                  ct_INT              50                  
 
- 21                  COMMENT             ! output            
+ 21                  COMMENT             ! displacement      
 
- 22                  kw_PRINT            print               
+ 22                  IDENTIFIER          s                   
+ 22                  op_EQUAL            =                   
+ 22                  IDENTIFIER          u                   
  22                  op_MUL              *                   
- 22                  sp_COMMA            ,                   
- 22                  ct_CHARACTER        "Time = "           
- 22                  sp_COMMA            ,                   
  22                  IDENTIFIER          t                   
+ 22                  op_SUB              -                   
+ 22                  IDENTIFIER          g                   
+ 22                  op_MUL              *                   
+ 22                  sp_LB               (                   
+ 22                  IDENTIFIER          t                   
+ 22                  op_MUL              *                   
+ 22                  op_MUL              *                   
+ 22                  ct_INT              2                   
+ 22                  sp_RB               )                   
+ 22                  op_DIV              /                   
+ 22                  ct_INT              2                   
 
- 23                  kw_PRINT            print               
- 23                  op_MUL              *                   
- 23                  sp_COMMA            ,                   
- 23                  ct_CHARACTER        'Displacement = '   
- 23                  sp_COMMA            ,                   
- 23                  IDENTIFIER          s                   
+ 24                  COMMENT             ! output            
 
- 25                  kw_END              end                 
- 25                  kw_PROGRAM          program             
- 25                  IDENTIFIER          gravitationaldisp   
+ 25                  kw_PRINT            print               
+ 25                  op_MUL              *                   
+ 25                  sp_COMMA            ,                   
+ 25                  ct_CHARACTER        "Time = "           
+ 25                  sp_COMMA            ,                   
+ 25                  IDENTIFIER          t                   
+
+ 26                  kw_PRINT            print               
+ 26                  op_MUL              *                   
+ 26                  sp_COMMA            ,                   
+ 26                  ct_CHARACTER        'Displacement = '   
+ 26                  sp_COMMA            ,                   
+ 26                  IDENTIFIER          s                   
+
+ 28                  kw_END              end                 
+ 28                  kw_PROGRAM          program             
+ 28                  IDENTIFIER          gravitationaldisp   

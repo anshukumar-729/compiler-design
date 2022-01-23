@@ -1,5 +1,8 @@
 program gravitationalDisp
-
+(-2.3,-i9)
+3.4
+-3.4
+-4
     ! this program calculates vertical motion under gravity 
     implicit none  
     
