@@ -22,8 +22,6 @@ Working of our lex file is:
     Then our output.txt file shows all the lexemes, its tokens and its line no in the given file.
 
 
-
-
 eg:
 
 input.txt

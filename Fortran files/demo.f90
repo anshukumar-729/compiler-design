@@ -11,7 +11,7 @@ program addNumbers
    b=3
    name= .truE.
    print *, "hiii"
-   if (.not.(name & name)) then
+   if (.not.(name .and. name)) then
    print *, a
    end if
 
