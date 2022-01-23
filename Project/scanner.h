@@ -55,6 +55,7 @@
 #define sp_SQUARERB 29
 #define sp_COMMA 49
 #define sp_STOP 50
+#define sp_AND 67
 
 // Operator
 #define op_EQUAL 8 

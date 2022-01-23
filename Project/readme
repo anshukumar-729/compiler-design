@@ -28,86 +28,123 @@ eg:
 
 input.txt
 
-    program addNumbers
+program gravitationalDisp
 
-! This simple program adds two numbers
-   impliciT none
-
-! Type declarations
-   integer :: a, b, result
-   character(len=10) :: f
-
-! Executable statements
-   f="$5%"
-   a = 9
-   b = 1
-   if (a<B)then
-   print *, 'The total is ', result
-   else
-      print *, f
-   end if
-end program addNumbers
-
-
+    ! this program calculates vertical motion under gravity 
+    implicit none  
+    
+       ! gravitational acceleration
+       real, parameter :: g = 9.81   
+       
+       ! variable declaration
+       real :: s ! displacement   
+       real :: t ! time  
+       real :: u ! initial speed  
+       
+       ! assigning values 
+       t = 5.0   
+       u = 50  
+       
+       ! displacement   
+       s = u * t - g * (t**2) / 2  
+       
+       ! output 
+       print *, "Time = ", t
+       print *, 'Displacement = ',s  
+       
+    end program gravitationalDisp
 
 
 
 
 output.txt
 
-=> program => kw_PROGRAM => line no 1
-=> addnumbers => IDENTIFIER => line no 1
-=> ! this simple program adds two numbers => COMMENT => line no 3
-=> implicit => kw_IMPLICIT => line no 4
-=> none => kw_NONE => line no 4
-=> ! type declarations => COMMENT => line no 6
-=> integer => dt_INT => line no 7
-=> : => sp_COLON => line no 7
-=> : => sp_COLON => line no 7
-=> a => IDENTIFIER => line no 7
-=> , => sp_COMMA => line no 7
-=> b => IDENTIFIER => line no 7
-=> , => sp_COMMA => line no 7
-=> result => kw_RESULT => line no 7
-=> character => dt_CHARACTER => line no 8
-=> ( => sp_LB => line no 8
-=> len => kw_LEN => line no 8
-=> = => op_EQUAL => line no 8
-=> 10 => ct_INT => line no 8
-=> ) => sp_RB => line no 8
-=> : => sp_COLON => line no 8
-=> : => sp_COLON => line no 8
-=> f => IDENTIFIER => line no 8
-=> ! executable statements => COMMENT => line no 10
-=> f => IDENTIFIER => line no 11
-=> = => op_EQUAL => line no 11
-=> "$5%" => ct_CHARACTER => line no 11
-=> a => IDENTIFIER => line no 12
-=> = => op_EQUAL => line no 12
-=> 9 => ct_INT => line no 12
-=> b => IDENTIFIER => line no 13
-=> = => op_EQUAL => line no 13
-=> 1 => ct_INT => line no 13
-=> if => kw_IF => line no 14
-=> ( => sp_LB => line no 14
-=> a => IDENTIFIER => line no 14
-=> < => op_RELATIONAL => line no 14
-=> b => IDENTIFIER => line no 14
-=> ) => sp_RB => line no 14
-=> then => kw_THEN => line no 14
-=> print => kw_PRINT => line no 15
-=> * => op_MUL => line no 15
-=> , => sp_COMMA => line no 15
-=> 'The total is ' => ct_CHARACTER => line no 15
-=> , => sp_COMMA => line no 15
-=> result => kw_RESULT => line no 15
-=> else => kw_ELSE => line no 16
-=> print => kw_PRINT => line no 17
-=> * => op_MUL => line no 17
-=> , => sp_COMMA => line no 17
-=> f => IDENTIFIER => line no 17
-=> end => kw_END => line no 18
-=> if => kw_IF => line no 18
-=> end => kw_END => line no 19
-=> program => kw_PROGRAM => line no 19
-=> addnumbers => IDENTIFIER => line no 19
+ Line No --          Tokens --           Lexemes --           
+
+ 1                   kw_PROGRAM          program             
+ 1                   IDENTIFIER          gravitationaldisp   
+
+ 3                   COMMENT             ! this program calculates vertical motion under gravity 
+
+ 4                   kw_IMPLICIT         implicit            
+ 4                   kw_NONE             none                
+
+ 6                   COMMENT             ! gravitational acceleration
+
+ 7                   dt_REAL             real                
+ 7                   sp_COMMA            ,                   
+ 7                   IDENTIFIER          parameter           
+ 7                   sp_COLON            :                   
+ 7                   sp_COLON            :                   
+ 7                   IDENTIFIER          g                   
+ 7                   op_EQUAL            =                   
+ 7                   ct_REAL             9.81                
+
+ 9                   COMMENT             ! variable declaration
+
+ 10                  dt_REAL             real                
+ 10                  sp_COLON            :                   
+ 10                  sp_COLON            :                   
+ 10                  IDENTIFIER          s                   
+ 10                  COMMENT             ! displacement      
+
+ 11                  dt_REAL             real                
+ 11                  sp_COLON            :                   
+ 11                  sp_COLON            :                   
+ 11                  IDENTIFIER          t                   
+ 11                  COMMENT             ! time              
+
+ 12                  dt_REAL             real                
+ 12                  sp_COLON            :                   
+ 12                  sp_COLON            :                   
+ 12                  IDENTIFIER          u                   
+ 12                  COMMENT             ! initial speed     
+
+ 14                  COMMENT             ! assigning values  
+
+ 15                  IDENTIFIER          t                   
+ 15                  op_EQUAL            =                   
+ 15                  ct_REAL             5.0                 
+
+ 16                  IDENTIFIER          u                   
+ 16                  op_EQUAL            =                   
+ 16                  ct_INT              50                  
+
+ 18                  COMMENT             ! displacement      
+
+ 19                  IDENTIFIER          s                   
+ 19                  op_EQUAL            =                   
+ 19                  IDENTIFIER          u                   
+ 19                  op_MUL              *                   
+ 19                  IDENTIFIER          t                   
+ 19                  op_SUB              -                   
+ 19                  IDENTIFIER          g                   
+ 19                  op_MUL              *                   
+ 19                  sp_LB               (                   
+ 19                  IDENTIFIER          t                   
+ 19                  op_MUL              *                   
+ 19                  op_MUL              *                   
+ 19                  ct_INT              2                   
+ 19                  sp_RB               )                   
+ 19                  op_DIV              /                   
+ 19                  ct_INT              2                   
+
+ 21                  COMMENT             ! output            
+
+ 22                  kw_PRINT            print               
+ 22                  op_MUL              *                   
+ 22                  sp_COMMA            ,                   
+ 22                  ct_CHARACTER        "Time = "           
+ 22                  sp_COMMA            ,                   
+ 22                  IDENTIFIER          t                   
+
+ 23                  kw_PRINT            print               
+ 23                  op_MUL              *                   
+ 23                  sp_COMMA            ,                   
+ 23                  ct_CHARACTER        'Displacement = '   
+ 23                  sp_COMMA            ,                   
+ 23                  IDENTIFIER          s                   
+
+ 25                  kw_END              end                 
+ 25                  kw_PROGRAM          program             
+ 25                  IDENTIFIER          gravitationaldisp   

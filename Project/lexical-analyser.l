@@ -71,6 +71,7 @@ real {positive_int}"."{number}+[Ee]?[+-]?[1-9]*?
 [}] return sp_CURLYRB;
 [[] return sp_SQUARELB;
 []] return sp_SQUARERB;
+[&] return sp_AND;
 
 [=][=]|[.][Ee][Qq][.] return op_EQUALITY;
 [/][=]|[.][Nn][Ee][.] return op_NOTEQUALITY;
@@ -384,6 +385,10 @@ int main(void)
                 else if(token==66)
                         {
                         sprintf(buffer, "%s", "kw_POINTER");
+                }
+                else if(token==67)
+                {
+                        sprintf(buffer, "%s", "sp_AND");
                 }
             else{
                 sprintf(buffer, "%d", token);
