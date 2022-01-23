@@ -1,58 +1,74 @@
-=> program => kw_PROGRAM => line no 1
-=> addnumbers => IDENTIFIER => line no 1
-=> ! this simple program adds two numbers => COMMENT => line no 3
-=> implicit => kw_IMPLICIT => line no 4
-=> none => kw_NONE => line no 4
-=> ! type declarations => COMMENT => line no 6
-=> integer => dt_INT => line no 7
-=> : => sp_COLON => line no 7
-=> : => sp_COLON => line no 7
-=> a => IDENTIFIER => line no 7
-=> , => sp_COMMA => line no 7
-=> b => IDENTIFIER => line no 7
-=> , => sp_COMMA => line no 7
-=> result => kw_RESULT => line no 7
-=> character => dt_CHARACTER => line no 8
-=> ( => sp_LB => line no 8
-=> len => kw_LEN => line no 8
-=> = => op_EQUAL => line no 8
-=> 10 => ct_INT => line no 8
-=> ) => sp_RB => line no 8
-=> : => sp_COLON => line no 8
-=> : => sp_COLON => line no 8
-=> f => IDENTIFIER => line no 8
-=> logical => dt_LOGICALS => line no 9
-=> : => sp_COLON => line no 9
-=> : => sp_COLON => line no 9
-=> name => IDENTIFIER => line no 9
-=> a => IDENTIFIER => line no 10
-=> = => op_EQUAL => line no 10
-=> 2 => ct_INT => line no 10
-=> b => IDENTIFIER => line no 11
-=> = => op_EQUAL => line no 11
-=> 3 => ct_INT => line no 11
-=> name => IDENTIFIER => line no 12
-=> = => op_EQUAL => line no 12
-=> .true. => ct_LOGICALS => line no 12
-=> print => kw_PRINT => line no 13
-=> * => op_MUL => line no 13
-=> , => sp_COMMA => line no 13
-=> "hiii" => ct_CHARACTER => line no 13
-=> if => kw_IF => line no 14
-=> ( => sp_LB => line no 14
-=> .not. => op_NOT => line no 14
-=> ( => sp_LB => line no 14
-=> .not. => op_NOT => line no 14
-=> name => IDENTIFIER => line no 14
-=> ) => sp_RB => line no 14
-=> ) => sp_RB => line no 14
-=> then => kw_THEN => line no 14
-=> print => kw_PRINT => line no 15
-=> * => op_MUL => line no 15
-=> , => sp_COMMA => line no 15
-=> a => IDENTIFIER => line no 15
-=> end => kw_END => line no 16
-=> if => kw_IF => line no 16
-=> end => kw_END => line no 18
-=> program => kw_PROGRAM => line no 18
-=> addnumbers => IDENTIFIER => line no 18
+ Line No --          Tokens --           Lexemes --           
+
+ 1                   kw_PROGRAM          program             
+ 1                   IDENTIFIER          addnumbers          
+
+ 3                   COMMENT             ! this simple program adds two numbers
+
+ 4                   kw_IMPLICIT         implicit            
+ 4                   kw_NONE             none                
+
+ 6                   COMMENT             ! type declarations 
+
+ 7                   dt_INT              integer             
+ 7                   sp_COLON            :                   
+ 7                   sp_COLON            :                   
+ 7                   IDENTIFIER          a                   
+ 7                   sp_COMMA            ,                   
+ 7                   IDENTIFIER          b                   
+ 7                   sp_COMMA            ,                   
+ 7                   kw_RESULT           result              
+
+ 8                   dt_CHARACTER        character           
+ 8                   sp_LB               (                   
+ 8                   kw_LEN              len                 
+ 8                   op_EQUAL            =                   
+ 8                   ct_INT              10                  
+ 8                   sp_RB               )                   
+ 8                   sp_COLON            :                   
+ 8                   sp_COLON            :                   
+ 8                   IDENTIFIER          f                   
+
+ 9                   dt_LOGICALS         logical             
+ 9                   sp_COLON            :                   
+ 9                   sp_COLON            :                   
+ 9                   IDENTIFIER          name                
+
+ 10                  IDENTIFIER          a                   
+ 10                  op_EQUAL            =                   
+ 10                  ct_INT              2                   
+
+ 11                  IDENTIFIER          b                   
+ 11                  op_EQUAL            =                   
+ 11                  ct_INT              3                   
+
+ 12                  IDENTIFIER          name                
+ 12                  op_EQUAL            =                   
+ 12                  ct_LOGICALS         .true.              
+
+ 13                  kw_PRINT            print               
+ 13                  op_MUL              *                   
+ 13                  sp_COMMA            ,                   
+ 13                  ct_CHARACTER        "hiii"              
+
+ 14                  kw_IF               if                  
+ 14                  sp_LB               (                   
+ 14                  op_NOT              .not.               
+ 14                  sp_LB               (                   
+ 14                  op_NOT              .not.               
+ 14                  IDENTIFIER          name                
+ 14                  sp_RB               )                   
+ 14                  sp_RB               )                   
+ 14                  kw_THEN             then                
+
+ 15                  kw_PRINT            print               
+ 15                  op_MUL              *                   
+ 15                  sp_COMMA            ,                   
+ 15                  IDENTIFIER          a                   
+
+ 16                  kw_END              end                 
+ 16                  kw_IF               if                  
+
+ 18                  kw_END              end                 
+ 18                  kw_PROGRAM          program             
+ 18                  IDENTIFIER          addnumbers          

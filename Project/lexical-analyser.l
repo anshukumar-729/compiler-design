@@ -106,6 +106,8 @@ int main(void)
 {
     int token;
     int yylineno = 1 ;
+    int countChar=0;
+    int prevLine=0;
 
     // file handling
     extern FILE *yyin, *yyout;
@@ -116,7 +118,9 @@ int main(void)
     char buffer[40] = {0}; 
     char buffer3[16] = {0}; 
     char buffer2;
-
+    fputs(" Line No --          ",yyout);
+    fputs("Tokens --           ",yyout);
+    fputs("Lexemes --           \n",yyout);
     token = yylex();
     while(token){
         if (token!=30){
@@ -387,10 +391,35 @@ int main(void)
 
 
 // Writing into File start
-            fputs("=> ",yyout);
+
+        if (prevLine==yylineno){            
+            fputs(" ",yyout);
+        }
+        else{
+             fputs("\n ",yyout);
+        }
+        prevLine=yylineno;
 
  // Since our language is case insensitive we converting all the UpperCase character into LowerCase character
+                sprintf(buffer3, "%d", yylineno);
+                fputs(buffer3,yyout);
+                countChar=strlen(buffer3);
 
+                while(countChar<20){
+                     fputs(" ",yyout);
+                        countChar++;
+                }
+                countChar=0;
+
+
+                fputs(buffer,yyout);
+                countChar=strlen(buffer);
+
+                while(countChar<20){
+                     fputs(" ",yyout);
+                        countChar++;
+                }
+                countChar=0;
         // Conversion Start
             for(int i=0;i<strlen(yytext);i++){
                 int temp=yytext[i];
@@ -405,21 +434,25 @@ int main(void)
                     sprintf(buffer3,"%c",buffer2);
                     fputs(buffer3,yyout);
                 }
+                countChar++;
              }
+                while(countChar<20){
+                        fputs(" ",yyout);
+                        countChar++;
+                }
+                countChar=0;
         // Conversion end
 
-                fputs(" => ",yyout);
-                fputs(buffer,yyout);
-                fputs(" => line no ",yyout);
-                sprintf(buffer, "%d", yylineno);
-                fputs(buffer,yyout);
+                
+
+                
                 fputs("\n",yyout);
 // Writing into file end
 
         }
         else{
 
-        // increasing countint of line when new line detected 
+        // increasing count of line when new line detected or when token = 30
         yylineno++;
 
         }
