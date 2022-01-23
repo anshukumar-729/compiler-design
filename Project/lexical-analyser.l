@@ -45,6 +45,8 @@ real {positive_int}"."{number}+[Ee]?[+-]?[1-9]*?
 [Ii][Nn] return kw_IN;
 [Oo][Uu][Tt] return kw_OUT;
 [Pp][Rr][Ii][Nn][Tt] return kw_PRINT;
+[Dd][Ii][Mm][Ee][Nn][Ss][Ii][Oo][Nn] return kw_DIMENSION;
+[Pp][Oo][Ii][Nn][Tt][Ee][Rr] return kw_POINTER;
 
 [Ii][Nn][Tt][Ee][Gg][Ee][Rr] return dt_INT;
 [Rr][Ee][Aa][Ll] return dt_REAL;
@@ -52,11 +54,11 @@ real {positive_int}"."{number}+[Ee]?[+-]?[1-9]*?
 [Ll][Oo][Gg][Ii][Cc][Aa][Ll] return dt_LOGICALS;
 [Cc][Hh][Aa][Rr][Aa][Cc][Tt][Ee][Rr] return dt_CHARACTER;
 
-{digit}*[,]({digit}*[i]|[i]{digit}*) return ct_COMPLEX;
+{real}*[,]({real}*[i]|[i]{real}*) return ct_COMPLEX;
 {real} return ct_REAL;
 {digit}* return ct_INT;
 ['].*[']|["].*["] return ct_CHARACTER;
-[Tt][Rr][Uu][Ee]|[Ff][Aa][Ll][Ss][Ee] return ct_LOGICALS;
+[.]([Tt][Rr][Uu][Ee]|[Ff][Aa][Ll][Ss][Ee])[.] return ct_LOGICALS;
 {identifier} return IDENTIFIER;
 
 [:] return sp_COLON;
@@ -70,15 +72,23 @@ real {positive_int}"."{number}+[Ee]?[+-]?[1-9]*?
 [[] return sp_SQUARELB;
 []] return sp_SQUARERB;
 
-[=][=] return op_EQUALITY;
+[=][=]|[.][Ee][Qq][.] return op_EQUALITY;
+[/][=]|[.][Nn][Ee][.] return op_NOTEQUALITY;
+[>]|[.][Gg][Tt][.] return op_GREATER;
+[<]|[.][Ll][Tt][.] return op_LESSER;
+[>][=]|[.][Gg][Ee][.] return op_GREATEREQUAL;
+[<][=]|[.][Ll][Ee][.] return op_LESSEREQUAL;
 [=] return op_EQUAL;
 [+] return op_ADD;
 [-] return op_SUB;
 [*] return op_MUL;
 [/] return op_DIV;
 [%] return op_MODULUS;
-([<>][=])|[<>] 	return op_RELATIONAL;
-
+[.][Aa][Nn][Dd][.] return op_AND;
+[.][Oo][Rr][.] return op_OR;
+[.][Nn][Oo][Tt][.] return op_NOT;
+[.][Ee][Qq][Vv][.] return op_EQV;
+[.][Nn][Ee][Qq][Vv][.] return op_NEQV;
 [\n] return nl;
 [!].* return COMMENT;
 [ \t]+ ;
@@ -318,7 +328,54 @@ int main(void)
             {
                     sprintf(buffer, "%s", "COMMENT");
             }
-
+            else if(token==55)
+                        {
+                        sprintf(buffer, "%s", "op_NOTEQUALITY");
+                }
+                else if(token==56)
+                        {
+                        sprintf(buffer, "%s", "op_GREATER");
+                }
+                else if(token==57)
+                        {
+                        sprintf(buffer, "%s", "op_LESSER");
+                }
+                else if(token==58)
+                        {
+                        sprintf(buffer, "%s", "op_GREATEREQUAL");
+                }
+                else if(token==59)
+                        {
+                        sprintf(buffer, "%s", "op_LESSEREQUAL");
+                }
+                else if(token==60)
+                        {
+                        sprintf(buffer, "%s", "op_AND");
+                }
+                else if(token==61)
+                        {
+                        sprintf(buffer, "%s", "op_OR");
+                }
+                else if(token==62)
+                        {
+                        sprintf(buffer, "%s", "op_NOT");
+                }
+                else if(token==63)
+                        {
+                        sprintf(buffer, "%s", "op_EQV");
+                }
+                else if(token==64)
+                        {
+                        sprintf(buffer, "%s", "op_NEQV");
+                }
+                else if(token==65)
+                {
+                        sprintf(buffer, "%s", "kw_DIMENSION");
+                }
+                else if(token==66)
+                        {
+                        sprintf(buffer, "%s", "kw_POINTER");
+                }
             else{
                 sprintf(buffer, "%d", token);
             }

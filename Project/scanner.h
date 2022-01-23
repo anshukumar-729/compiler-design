@@ -52,6 +52,18 @@
 #define op_MODULUS 52
 #define inval 53
 #define COMMENT 54
+#define op_NOTEQUALITY 55
+#define op_GREATER 56
+#define op_LESSER 57
+#define op_GREATEREQUAL 58
+#define op_LESSEREQUAL 59
+#define op_AND 60
+#define op_OR 61
+#define op_NOT 62
+#define op_EQV 63
+#define op_NEQV 64
+#define kw_DIMENSION 65
+#define kw_POINTER 66
 
 
 
