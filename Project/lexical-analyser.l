@@ -12,6 +12,7 @@
 digit [0-9]
 alpha [a-zA-Z]
 identifier [a-zA-Z_][0-9a-zA-Z_]*
+positive_int [0]|[1-9][0-9]*
 number {digit}{digit}*
 real {positive_int}"."{number}+[Ee]?[+-]?[1-9]*?
 
