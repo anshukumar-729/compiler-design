@@ -1,4 +1,0 @@
-
-Entered arithmetic expression is Invalid
-
-Rejected!
