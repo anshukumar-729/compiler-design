@@ -1,6 +1,4 @@
-D:@ --hit
-C:IDENTIFIER D --hit
-P:kw_PROGRAM IDENTIFIER C kw_PROGRAM hit
 
-Result=accept
-Accepted!
+Entered arithmetic expression is Invalid
+
+Rejected!

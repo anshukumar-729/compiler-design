@@ -17,6 +17,10 @@ extern int yylineno;
 %token NUMBER 
 %token kw_PROGRAM
 %token IDENTIFIER
+%token sp_COMMA
+%token kw_END
+%token kw_IMPILICIT
+%token dt_INT
 
 %left '*' '/' '%' 
 
@@ -32,10 +36,13 @@ ROOT: P{
          printf("\nResult=%s\n", "accept"); 
          return 0; 
       }
-P:kw_PROGRAM IDENTIFIER C kw_PROGRAM {printf("%s\n", "P:kw_PROGRAM IDENTIFIER C kw_PROGRAM --hit");}
+P:kw_PROGRAM IDENTIFIER STATEMENTS kw_END kw_PROGRAM IDENTIFIER {printf("%s\n", "P:kw_PROGRAM IDENTIFIER C kw_PROGRAM --hit");}
 
-C:IDENTIFIER D {printf("%s\n", "C:IDENTIFIER D --hit"); }
-D:'@' { printf("%s\n","D:@ --hit");}
+STATEMENTS: STATEMENTS2
+
+STATEMENTS2: dt_INT IDENTIFIERS |dt_INT IDENTIFIERS 
+
+IDENTIFIERS: IDENTIFIER | IDENTIFIERS sp_COMMA
 
 
 

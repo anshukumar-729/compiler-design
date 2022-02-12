@@ -17,7 +17,14 @@ identifier [a-zA-Z_][0-9a-zA-Z_]*
          //  printf("%d\n",yylval);
           return NUMBER; 
        } 
+
 [pP][Rr][oO][Gg][rR][aA][Mm] return kw_PROGRAM;
+[Ee][Nn][Dd] return kw_END;
+[Ii][Nn][Tt][Ee][Gg][Ee][Rr] return dt_INT;
+[,] return sp_COMMA;
+
+
+
 {identifier} return IDENTIFIER;
 
 

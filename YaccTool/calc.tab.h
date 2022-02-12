@@ -51,7 +51,11 @@ extern int yydebug;
   {
     NUMBER = 258,
     kw_PROGRAM = 259,
-    IDENTIFIER = 260
+    IDENTIFIER = 260,
+    sp_COMMA = 261,
+    kw_END = 262,
+    kw_IMPILICIT = 263,
+    dt_INT = 264
   };
 #endif
 

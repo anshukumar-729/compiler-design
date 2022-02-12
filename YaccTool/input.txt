@@ -1,5 +1,7 @@
-program 
+program addNumbers
 
-ABC Abc @
-program
+  
 
+   integer :: a, b, result
+
+end program addNumbers
