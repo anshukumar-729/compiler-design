@@ -18,6 +18,75 @@ extern int yylineno;
 %token kw_PROGRAM
 %token IDENTIFIER
 
+%token kw_IMPLICIT 
+%token kw_NONE 
+%token kw_LEN 
+%token kw_KIND 
+%token kw_RESULT 
+%token kw_INTENT 
+%token kw_IN 
+%token kw_OUT 
+%token kw_DIMENSION 
+%token kw_POINTER 
+%token kw_PRINT 
+%token kw_IF 
+%token kw_ELSE 
+%token kw_END 
+%token kw_THEN 
+%token kw_DO 
+%token kw_CONTINUE 
+%token kw_GOTO 
+%token kw_RETURN 
+%token kw_SELECT 
+%token kw_CASE 
+%token kw_FUNCTION 
+%token dt_INT 
+%token dt_COMPLEX 
+%token dt_LOGICALS 
+%token dt_CHARACTER 
+%token dt_REAL 
+%token kw_TYPE 
+ 
+%token sp_COLON 
+%token sp_SEMICOLON
+%token sp_LB 
+%token sp_RB 
+%token sp_CURLYLB 
+%token sp_CURLYRB 
+%token sp_SQUARELB 
+%token sp_SQUARERB 
+%token sp_COMMA 
+%token sp_STOP 
+%token sp_AND 
+
+%token op_EQUAL 
+%token op_ADD 
+%token op_SUB 
+%token op_MUL 
+%token op_DIV 
+%token op_EQUALITY 
+%token op_RELATIONAL 
+%token op_NOTEQUALITY
+%token op_GREATER 
+%token op_LESSER
+%token op_GREATEREQUAL 
+%token op_LESSEREQUAL 
+%token op_AND 
+%token op_OR 
+%token op_NOT 
+%token op_EQV 
+%token op_NEQV 
+%token op_MODULUS 
+%token ct_INT 
+%token ct_REAL 
+%token ct_CHARACTER 
+%token ct_COMPLEX 
+%token ct_LOGICALS 
+%token nl 
+%token COMMENT 
+%token inval 
+
+
 %left '*' '/' '%' 
 
 %left '+' '-'
