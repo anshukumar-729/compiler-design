@@ -1751,7 +1751,7 @@ yyreduce:
   case 2:
 #line 107 "calc.y"
        {
-         printf("\nResult=%s\n", "accept"); 
+         
          return 0; 
       }
 #line 1758 "calc.tab.c"
@@ -2452,7 +2452,7 @@ yyreturn:
   
 void yyerror() 
 { 
-   printf("\nexpression is Invalid\n\n"); 
+   printf("\n Untrack error found\n"); 
    flag=1; 
 } 
 
@@ -2466,8 +2466,8 @@ int main (int argc, char* argv[])
   int tok = yyparse();
   
   if( tok == 0) 
-     printf("Accepted!\n");
+     printf("The input formate for fortran language is Accepted!\n");
   else
-     printf("Rejected!\n");
+     printf("The input formate for fortran language is Rejected!\n");
   return 0;
 } 

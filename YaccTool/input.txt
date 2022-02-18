@@ -1,10 +1,13 @@
 program f
 
-integer   j
+integer  :: j
 
 a=0
-read *,ja
-print*, na
+print*,k
+
+if(hhf) then
+end if
+hdhd=0
 
 
 end program d
