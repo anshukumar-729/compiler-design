@@ -17,7 +17,6 @@ extern int yylineno;
 %token NUMBER 
 %token kw_PROGRAM
 %token IDENTIFIER
-
 %token kw_IMPLICIT 
 %token kw_NONE 
 %token kw_LEN 
