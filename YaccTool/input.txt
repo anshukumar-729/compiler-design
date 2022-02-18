@@ -1,5 +1,13 @@
-program 
+program f
 
-ABC Abc @
-program
+integer  :: j
 
+a=0
+print*,k
+
+if(hhf) then
+end if
+hdhd=0
+
+
+end program d
