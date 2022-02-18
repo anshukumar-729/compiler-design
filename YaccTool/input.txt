@@ -1,7 +1,10 @@
-program addNumbers
+program f
 
-  
+integer   j
 
-   integer :: a, b, result
+a=0
+read *,ja
+print*, na
 
-end program addNumbers
+
+end program d

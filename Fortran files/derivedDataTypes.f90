@@ -1,17 +1,25 @@
+
+
 program deriveDataType
 
     !type declaration
+    
     type Books
        character(len = 50) :: title
        character(len = 50) :: author
        character(len = 150) :: subject
        integer :: book_id
+       
     end type Books
+    type hook
+         integer :: h1
+         type(Books) :: h2
+      end type hook
     
     !declaring type variables
-    type(Books) :: book1 
+    type(Books) :: book1 , book3
     type(Books) :: book2 
-    
+    integer ::o
     !accessing the components of the structure
     
     book1%title = "C Programming"

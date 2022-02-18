@@ -1,100 +1,22 @@
  Line No --          Tokens --           Lexemes --           
 
- 1                   kw_PROGRAM          program             
- 1                   IDENTIFIER          gravitationaldisp   
+ 1                   IDENTIFIER          hh                  
+ 1                   op_EQUAL            =                   
+ 1                   sp_LB               (                   
+ 1                   ct_INT              1                   
+ 1                   sp_COMMA            ,                   
+ 1                   ct_INT              2                   
+ 1                   IDENTIFIER          i                   
+ 1                   sp_RB               )                   
 
- 2                   sp_LB               (                   
- 2                   ct_COMPLEX          -2.3,-i             
- 2                   ct_INT              9                   
- 2                   sp_RB               )                   
+ 2                   IDENTIFIER          bsb                 
+ 2                   op_EQUAL            =                   
+ 2                   ct_CHARACTER        "jfjf dhdhd hdhdh"  
 
- 3                   ct_REAL             3.4                 
-
- 4                   ct_REAL             -3.4                
-
- 5                   ct_INT              -4                  
-
- 6                   COMMENT             ! this program calculates vertical motion under gravity 
-
- 7                   kw_IMPLICIT         implicit            
- 7                   kw_NONE             none                
-
- 9                   COMMENT             ! gravitational acceleration
-
- 10                  dt_REAL             real                
- 10                  sp_COMMA            ,                   
- 10                  IDENTIFIER          parameter           
- 10                  sp_COLON            :                   
- 10                  sp_COLON            :                   
- 10                  IDENTIFIER          g                   
- 10                  op_EQUAL            =                   
- 10                  ct_REAL             9.81                
-
- 12                  COMMENT             ! variable declaration
-
- 13                  dt_REAL             real                
- 13                  sp_COLON            :                   
- 13                  sp_COLON            :                   
- 13                  IDENTIFIER          s                   
- 13                  COMMENT             ! displacement      
-
- 14                  dt_REAL             real                
- 14                  sp_COLON            :                   
- 14                  sp_COLON            :                   
- 14                  IDENTIFIER          t                   
- 14                  COMMENT             ! time              
-
- 15                  dt_REAL             real                
- 15                  sp_COLON            :                   
- 15                  sp_COLON            :                   
- 15                  IDENTIFIER          u                   
- 15                  COMMENT             ! initial speed     
-
- 17                  COMMENT             ! assigning values  
-
- 18                  IDENTIFIER          t                   
- 18                  op_EQUAL            =                   
- 18                  ct_REAL             5.0                 
-
- 19                  IDENTIFIER          u                   
- 19                  op_EQUAL            =                   
- 19                  ct_INT              50                  
-
- 21                  COMMENT             ! displacement      
-
- 22                  IDENTIFIER          s                   
- 22                  op_EQUAL            =                   
- 22                  IDENTIFIER          u                   
- 22                  op_MUL              *                   
- 22                  IDENTIFIER          t                   
- 22                  op_SUB              -                   
- 22                  IDENTIFIER          g                   
- 22                  op_MUL              *                   
- 22                  sp_LB               (                   
- 22                  IDENTIFIER          t                   
- 22                  op_MUL              *                   
- 22                  op_MUL              *                   
- 22                  ct_INT              2                   
- 22                  sp_RB               )                   
- 22                  op_DIV              /                   
- 22                  ct_INT              2                   
-
- 24                  COMMENT             ! output            
-
- 25                  kw_PRINT            print               
- 25                  op_MUL              *                   
- 25                  sp_COMMA            ,                   
- 25                  ct_CHARACTER        "Time = "           
- 25                  sp_COMMA            ,                   
- 25                  IDENTIFIER          t                   
-
- 26                  kw_PRINT            print               
- 26                  op_MUL              *                   
- 26                  sp_COMMA            ,                   
- 26                  ct_CHARACTER        'Displacement = '   
- 26                  sp_COMMA            ,                   
- 26                  IDENTIFIER          s                   
-
- 28                  kw_END              end                 
- 28                  kw_PROGRAM          program             
- 28                  IDENTIFIER          gravitationaldisp   
+ 3                   IDENTIFIER          hh                  
+ 3                   op_EQUAL            =                   
+ 3                   IDENTIFIER          js                  
+ 3                   op_MUL              *                   
+ 3                   IDENTIFIER          hshd                
+ 3                   op_DIV              /                   
+ 3                   IDENTIFIER          kdjd                

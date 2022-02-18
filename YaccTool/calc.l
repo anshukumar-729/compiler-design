@@ -2,30 +2,28 @@
    /* Definition section */
   #include<stdio.h> 
   #include "calc.tab.h" 
-//   extern int yylval; 
+
 %} 
   
 /* Rule Section */
+
+digit [0-9]
+alpha [a-zA-Z]
 identifier [a-zA-Z_][0-9a-zA-Z_]*
+positive_int [0]|[1-9][0-9]*
+number {digit}{digit}*
+real {positive_int}"."{number}+[Ee]?[+-]?[1-9]*?
+literalNumber {real}|{number}
+
+
 %% 
 
-[0-9]+ { 
-          yylval=atoi(yytext); 
 
-         //  printf("%d\n",NUMBER);
-         //  printf("%s\n",yytext);
-         //  printf("%d\n",yylval);
-          return NUMBER; 
-       } 
+
+
+
 
 [pP][Rr][oO][Gg][rR][aA][Mm] return kw_PROGRAM;
-[Ee][Nn][Dd] return kw_END;
-[Ii][Nn][Tt][Ee][Gg][Ee][Rr] return dt_INT;
-[,] return sp_COMMA;
-
-
-
-{identifier} return IDENTIFIER;
 [Ii][Mm][Pp][Ll][Ii][Cc][Ii][Tt] return kw_IMPLICIT;
 [Nn][Oo][Nn][Ee] return kw_NONE;
 [Ii][Ff] return kw_IF;
@@ -34,6 +32,7 @@ identifier [a-zA-Z_][0-9a-zA-Z_]*
 [Tt][Hh][Ee][Nn] return kw_THEN;
 [Tt][Yy][Pp][Ee] return kw_TYPE;
 [Dd][Oo] return kw_DO;
+[Ww][Hh][Ii][Ll][Ee] return kw_WHILE;
 [Ll][Ee][Nn] return kw_LEN;
 [Kk][Ii][Nn][Dd] return kw_KIND;
 [Cc][Oo][Nn][Tt][Ii][Nn][Uu][Ee] return kw_CONTINUE;
@@ -47,22 +46,23 @@ identifier [a-zA-Z_][0-9a-zA-Z_]*
 [Ii][Nn] return kw_IN;
 [Oo][Uu][Tt] return kw_OUT;
 [Pp][Rr][Ii][Nn][Tt] return kw_PRINT;
+[Rr][Ee][Aa][Dd] return kw_READ;
 [Dd][Ii][Mm][Ee][Nn][Ss][Ii][Oo][Nn] return kw_DIMENSION;
 [Pp][Oo][Ii][Nn][Tt][Ee][Rr] return kw_POINTER;
 
-[Ii][Nn][Tt][Ee][Gg][Ee][Rr] return dt_INT;
+[Ii][Nn][Tt][Ee][Gg][Ee][Rr] {return dt_INT;}
 [Rr][Ee][Aa][Ll] return dt_REAL;
 [Cc][Oo][Mm][Pp][Ll][Ee][Xx] return dt_COMPLEX;
 [Ll][Oo][Gg][Ii][Cc][Aa][Ll] return dt_LOGICALS;
 [Cc][Hh][Aa][Rr][Aa][Cc][Tt][Ee][Rr] return dt_CHARACTER;
 
-({real}*|[-]{real}*)[,](([-]{real}*|{real}*)[i]|[i]([-]{real}*|{real}*)) return ct_COMPLEX;
+(({literalNumber}*|[-]{literalNumber}*)[+](([-]{literalNumber}*|{literalNumber}*)[i]|[i]([-]{literalNumber}*|{literalNumber}*)))|[(]{literalNumber}+[,]{literalNumber}+[)] return ct_COMPLEX;
 {real}|[-]{real} return ct_REAL;
 {digit}*|[-]{digit} return ct_INT;
 ['].*[']|["].*["] return ct_CHARACTER;
 [.]([Tt][Rr][Uu][Ee]|[Ff][Aa][Ll][Ss][Ee])[.] return ct_LOGICALS;
 
-
+{identifier} return IDENTIFIER;
 [:] return sp_COLON;
 [,] return sp_COMMA;
 [.] return sp_STOP;
@@ -92,18 +92,13 @@ identifier [a-zA-Z_][0-9a-zA-Z_]*
 [.][Nn][Oo][Tt][.] return op_NOT;
 [.][Ee][Qq][Vv][.] return op_EQV;
 [.][Nn][Ee][Qq][Vv][.] return op_NEQV;
-[\n] return nl;
-[!].* return COMMENT;
+[\n] {yylineno++; return nl ;}
+[!].* ;
 [ \t]+ ;
-. return inval ;
+.  ;
 
 
-
-[ \t\n] ; 
   
-[\n] return 0; 
-  
-. return yytext[0]; 
   
 %% 
   
