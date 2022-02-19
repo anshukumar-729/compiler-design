@@ -122,7 +122,9 @@ main: kw_PROGRAM identifier newline program  kw_END {printf("%s","upto line no: 
 program: implicitnone declare state 
 
 identifier: IDENTIFIER|
-IDENTIFIER op_MODULUS IDENTIFIER
+IDENTIFIER op_MODULUS IDENTIFIER|
+keyword {printf("%s","upto line no: ");printf("%d",yylineno);printf("%s"," keyword cannot be an oparand/identifier!\n");exit(1);}
+
 declare:typeDeclares |
 
 state:statements |
@@ -213,7 +215,8 @@ otherconstants:ct_CHARACTER |
 ct_COMPLEX |
 ct_LOGICALS 
 operands:identifier |
-constants 
+constants |
+keyword {printf("%s","upto line no: ");printf("%d",yylineno);printf("%s"," keyword cannot be an oparand/identifier!\n");exit(1);}
 constants:ct_INT |
 ct_REAL |
 otherconstants 
