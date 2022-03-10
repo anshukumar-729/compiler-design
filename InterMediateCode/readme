@@ -1,0 +1,40 @@
+In this assignment of semantics analysis,there are five files used:
+1)input.txt
+2)calc.l
+3)calc.y
+4)run.sh(only for ubuntu operating system else write the whole running command for windows operating system)
+5)output.txt
+
+Basically, this yacc file works on checking the errors in syntax for the given input corresponding to the input file written in fortran language and thus showing whether that input file will be accepted or not i.e. 
+whether the language is error free or not on the basis of syntax corresponding to the fortran language.
+
+The input file contains a sample fortran program.
+
+On compiling the calc.l file,on more file will be produced which is lexx.yy.c.
+
+The calc.l file includes the cal.tab.h file as header file in the definition
+section which is produced when we run the calc.y file in terminal.In the 
+action and rules section of the lex file.Since the Fortran language is case 
+insensitive , so we first convert all the upper case character into lower 
+case charcaters.So whenever a word or number or any expression present in 
+the input.txt file is matched with regular expression defined in the calc.l 
+file then its respective token is returned to the yacc file.
+
+On compiling the calc.y file two more files will be produced which are calc.
+tab.c and calc.tab.h ,which helps to connect with the lex file.
+
+In the calc.y file the token that are returned by the lex file is defined in 
+this yacc file.The tokens written in yacc file are based on the precedence 
+order.In the grammar part of the yacc file,the grammar part starts with the 
+ROOT subroutine,and then begin to match the syntax wriiten in the input file with the corresponding grammar written in the rules section.
+
+If the the syntax of the fortran language written in input.txt file is true  
+according to the set of grammar rules written in the yacc file, then either 
+the corresponding syntax of the input file will be true which will 
+ultimately return the accept state thus identifying as error free code written in the input file.Thus claiming that input file in fortran language does not have syntax error .
+Otherwise if the corresponding syntax of the input file will be true according to the set of grammar rules written in the yacc file ,then corresponding printing statement will be displayed as the output  as well as exiting the program with value 1 being returned and displaying the corresponding untracked error and the particular line number at which error being found on the output file.Thus claiming that input file in fortran language to have syntax error .
+
+The run.sh file works on ubuntu operating system ,so we can directly run the command on terminal else we have to write all the commands written in this file on the terminal and then get the output.
+
+The output.txt file will show whether the code wriiten in fortran language in th input file can be accepted or not on the basis of the syntax of the language.
+
