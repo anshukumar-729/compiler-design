@@ -1,1 +1,50 @@
+A00 : a.type = integer
+A01 : b.type = integer
+A02 : c1.type = character
+A03 : c2.type = character
+A04 : cm1.type = complex
+A05 : cm2.type = complex
+A06 : r1.type = real
+A07 : r2.type = real
+A08 : t00 = b * 2
+A09 : t01 = 3 / 8
+A10 : t02 = t00 + t01
+A11 : a = t02
+A12 : t00 = 9 * 10
+A13 : t01 = 11 + t00
+A14 : b = t01
+A15 : print ( "hello world" )
+A16 : read ( c1 )
+A17 : f2 = true
+A18 : f1 = true
+A19 : t1 = f1 && true
+A20 : if a > b f1 = t1
+A21 : else f1 = false
+A22 : f2 = f2 || f1
+A23 : if f2 = true GOTO B00
+A24 : else GOTO C00
+B00 : t00 = a + b
+B01 : print ( t00 )
+B02 : GOTO A25
+C00 : t00 = a * b
+C01 : print ( t00 )
+C02 : GOTO A25
+A25 : a = 1
+A26 : if a < 20 GOTO D00
+A27 : GOTO A28
+D00 : print ( a )
+D01 : t00 = a + 2
+D03 : a = t00 
+D04 : GOTO A26
+A28 : f2 = true
+A29 : f1 = true
+A30 : t1 = f1 && true
+A31 : if a < b f1 = t1
+A32 : else f1 = false
+A33 : f2 = f2 || f1
+A34 : if f2 = true GOTO E00
+A35 : else GOTO F00
+E00 : t00 = a + 1
+E01 : a = t00
+E02 : GOTO A28
 The input formate for fortran language is Accepted!

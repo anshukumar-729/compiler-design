@@ -1,6 +1,6 @@
 !# /bin/bash
-bison -d calc.y 
+bison -d new.y 
 flex calc.l
-gcc lex.yy.c calc.tab.c 
+gcc lex.yy.c new.tab.c 
 ./a.out input.txt > output.txt
 cat output.txt

@@ -1,42 +1,35 @@
-integer function myfunc(a) result(a)
-    a=a+1
-    return
-end function
-! this is comment
 program addNumbers
 
-implicit none
+! declaration
+   integer :: a,b
+   character :: c1,c2
+   complex :: cm1,cm2
+   real :: r1,r2
 
-integer:: a,b,c
-  !type declaration
-    
-    type Books
-       character(len = 50) :: title
-       character(len = 50) :: author
-       character(len = 150) :: subject
-       integer :: book_id
-       
-    end type Books
-    type hook
-         integer :: h1
-         type(Books) :: h2
-      end type hook
-    
-    !declaring type variables
-    type(Books) :: book1 , book3
-    type(Books) :: book2 
-    integer ::o
+!statements
+    a = b * 2 + 3 / 8
+    b = 11 + 9 * 10
 
-do i=0,5,1
-a=a+10
-end do
+    print *, "hello world"
+    read *, c1
+!control flow
+    ! if else
+    if (a>b) then
+        print *,a+b
 
-if(a>b) then
-c=a
-else
-c=b
-end if
+        else
+            print *, a*b
+    end if
 
-myfunc()
-  
+    !do loop
+    do a = 1, 20, 2
+        print *,a
+    end do
+
+    !do while loop
+    do while(a<b)
+        a=a+1
+    end do
+
+   
 end program addNumbers

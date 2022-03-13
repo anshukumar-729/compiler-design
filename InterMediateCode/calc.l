@@ -1,7 +1,7 @@
 %{ 
    /* Definition section */
   #include<stdio.h> 
-  #include "calc.tab.h" 
+  #include "new.tab.h" 
 
 %} 
   
@@ -58,7 +58,7 @@ literalNumber {real}|{number}
 
 (({literalNumber}*|[-]{literalNumber}*)[+](([-]{literalNumber}*|{literalNumber}*)[i]|[i]([-]{literalNumber}*|{literalNumber}*)))|[(]{literalNumber}+[,]{literalNumber}+[)] return ct_COMPLEX;
 {real}|[-]{real} return ct_REAL;
-{digit}*|[-]{digit} return ct_INT;
+{digit}* return ct_INT;
 ['].*[']|["].*["] return ct_CHARACTER;
 [.]([Tt][Rr][Uu][Ee]|[Ff][Aa][Ll][Ss][Ee])[.] return ct_LOGICALS;
 

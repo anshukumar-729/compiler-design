@@ -160,12 +160,12 @@ datatype colons  {printf("%s","upto line no: ");printf("%d",yylineno);printf("%s
 colons {printf("%s","upto line no: ");printf("%d",yylineno);printf("%s"," declaration syntax error!\n");exit(1);}|
 datatypeType 
 
-list: identifier sp_COMMA list  |
+list: identifier {printf("%s","declare");} sp_COMMA list  |
 sp_COMMA list  {printf("%s","upto line no: ");printf("%d",yylineno);printf("%s"," syntax error in declaration of variables\n");exit(1);}|
 identifier list  {printf("%s","upto line no: ");printf("%d",yylineno);printf("%s"," syntax error in declaration of variables\n");exit(1);}|
 identifier sp_COMMA  {printf("%s","upto line no: ");printf("%d",yylineno);printf("%s"," syntax error in declaration of variables\n");exit(1);}|
 sp_COMMA  {printf("%s","upto line no: ");printf("%d",yylineno);printf("%s"," syntax error in declaration of variables\n");exit(1);}|
-identifier newline 
+identifier {printf("%s","declare");} newline 
 
 listwithoutnewline: identifier sp_COMMA listwithoutnewline|
 sp_COMMA listwithoutnewline {printf("%s","upto line no: ");printf("%d",yylineno);printf("%s"," syntax error in arguments\n");exit(1);}|

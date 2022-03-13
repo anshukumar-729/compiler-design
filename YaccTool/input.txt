@@ -1,42 +1,11 @@
-integer function myfunc(a) result(a)
-    a=a+1
-    return
-end function
-! this is comment
 program addNumbers
 
-implicit none
+integer :: a,b,h
+complex :: j
+real :: yy
+character::akaa,kkk
 
-integer:: a,b,c
-  !type declaration
-    
-    type Books
-       character(len = 50) :: title
-       character(len = 50) :: author
-       character(len = 150) :: subject
-       integer :: book_id
-       
-    end type Books
-    type hook
-         integer :: h1
-         type(Books) :: h2
-      end type hook
-    
-    !declaring type variables
-    type(Books) :: book1 , book3
-    type(Books) :: book2 
-    integer ::o
 
-do i=0,5,1
-a=a+10
-end do
+d=s*1+1+1-1
 
-if(a>b) then
-c=a
-else
-c=b
-end if
-
-myfunc()
-  
 end program addNumbers
